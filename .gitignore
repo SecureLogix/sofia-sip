@@ -7,3 +7,4 @@
 *~
 *.orig
 .deps
+.libs

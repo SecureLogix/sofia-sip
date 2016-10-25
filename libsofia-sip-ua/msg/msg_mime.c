@@ -45,14 +45,14 @@
 #include <errno.h>
 #include <assert.h>
 
-#include <sofia-sip/su_alloc.h>
+#include "sofia-sip/su_alloc.h"
 
 #include "msg_internal.h"
 #include "sofia-sip/msg.h"
 #include "sofia-sip/msg_mime.h"
 
-#include <sofia-sip/su_uniqueid.h>
-#include <sofia-sip/su_errno.h>
+#include "sofia-sip/su_uniqueid.h"
+#include "sofia-sip/su_errno.h"
 
 #if !HAVE_MEMMEM
 void *memmem(const void *haystack, size_t haystacklen,
@@ -67,8 +67,8 @@ size_t memcspn(const void *mem, size_t memlen,
 /** Protocol version of MIME */
 char const msg_mime_version_1_0[] = "MIME/1.0";
 
-#include <sofia-sip/msg_parser.h>
-#include <sofia-sip/msg_mime_protos.h>
+#include "sofia-sip/msg_parser.h"
+#include "sofia-sip/msg_mime_protos.h"
 
 /** Define a header class for headers without any extra data to copy */
 #define MSG_HEADER_CLASS_G(c, l, s, kind) \
@@ -1673,7 +1673,7 @@ MSG_HEADER_CLASS(msg_, content_length, "Content-Length", "l",
 		 l_common, single_critical, msg_default, msg_generic);
 
 /**@ingroup msg_content_length
- * Create a @b Content-Length header object.
+ *ï¿½Create a @b Content-Length header object.
  *
  * The function msg_content_length_create() creates a Content-Length
  * header object with the value @a n.  The memory for the header is
@@ -2100,8 +2100,14 @@ issize_t msg_warning_e(char b[], isize_t bsiz, msg_header_t const *h, int f)
 
   n = snprintf(b, bsiz, "%03u %s%s%s ", 
 	       w->w_code, w->w_host, port ? ":" : "", port ? port : "");
-  if (n < 0)
-    return n;
+
+  //CHANGE 10 - EAB 20090817
+//  if (n < 0)
+//    return n;
+  if ( n >= bsiz )
+  {
+    return -1;
+  }
 
   m = msg_unquoted_e((size_t)n < bsiz ? b + n : NULL, bsiz - n, w->w_text);
 

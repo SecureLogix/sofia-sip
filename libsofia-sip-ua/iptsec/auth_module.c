@@ -46,7 +46,7 @@
 #include <sys/stat.h>
 #include <unistd.h>
 
-#include <sofia-sip/auth_digest.h>
+#include "sofia-sip/auth_digest.h"
 
 #include "iptsec_debug.h"
 
@@ -57,17 +57,16 @@
 static char const __func__[] = "auth_mod";
 #endif
 
-#include <sofia-sip/su_debug.h>
+#include "sofia-sip/su_debug.h"
+#include "sofia-sip/su_wait.h"
+#include "sofia-sip/su_alloc.h"
+#include "sofia-sip/su_tagarg.h"
 
-#include <sofia-sip/su_wait.h>
-#include <sofia-sip/su_alloc.h>
-#include <sofia-sip/su_tagarg.h>
+#include "sofia-sip/base64.h"
+#include "sofia-sip/su_md5.h"
 
-#include <sofia-sip/base64.h>
-#include <sofia-sip/su_md5.h>
-
-#include <sofia-sip/msg_parser.h>
-#include <sofia-sip/msg_date.h>
+#include "sofia-sip/msg_parser.h"
+#include "sofia-sip/msg_date.h"
 
 #include "sofia-sip/auth_module.h"
 #include "sofia-sip/auth_plugin.h"

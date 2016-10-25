@@ -34,7 +34,7 @@
  */
 
 #ifndef MSG_TYPES_H
-#include <sofia-sip/msg_types.h>
+#include "sofia-sip/msg_types.h"
 #endif
 
 SOFIA_BEGIN_DECLS
@@ -63,7 +63,7 @@ SOFIA_END_DECLS
 
 #ifndef HTTP_PROTOS_H
 #define HTTP_HCLASSES_ONLY
-#include <sofia-sip/http_protos.h>
+#include "sofia-sip/http_protos.h"
 #undef HTTP_HCLASSES_ONLY
 #endif
 

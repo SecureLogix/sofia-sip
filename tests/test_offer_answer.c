@@ -33,7 +33,7 @@
 #include "config.h"
 
 #include "test_nua.h"
-#include <sofia-sip/su_tag_class.h>
+#include "sofia-sip/su_tag_class.h"
 
 #if HAVE_FUNC
 #elif HAVE_FUNCTION

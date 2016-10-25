@@ -81,9 +81,9 @@ typedef int socklen_t;
 #include "sofia-resolv/sres_record.h"
 #include "sofia-resolv/sres_async.h"
 
-#include <sofia-sip/su_alloc.h>
-#include <sofia-sip/su_strlst.h>
-#include <sofia-sip/su_errno.h>
+#include "sofia-sip/su_alloc.h"
+#include "sofia-sip/su_strlst.h"
+#include "sofia-sip/su_errno.h"
 
 #include "sofia-sip/htable.h"
 
@@ -547,7 +547,7 @@ static int m_get_domain(char *d, int n, sres_message_t *m, uint16_t offset);
 
 #define SU_LOG sresolv_log
 
-#include <sofia-sip/su_debug.h>
+#include "sofia-sip/su_debug.h"
 
 #ifdef HAVE_WIN32
 #include <winreg.h>

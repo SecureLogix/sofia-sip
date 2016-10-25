@@ -41,8 +41,8 @@
 
 #include <assert.h>
 
-#include <sofia-sip/su_alloc.h>		/* XXX */
-#include <sofia-sip/su.h>
+#include "sofia-sip/su_alloc.h"		/* XXX */
+#include "sofia-sip/su.h"
 
 #include "msg_internal.h"
 #include "sofia-sip/msg_parser.h"

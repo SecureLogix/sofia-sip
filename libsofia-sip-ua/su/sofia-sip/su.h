@@ -37,13 +37,13 @@
 /* Includes */
 
 #ifndef SU_CONFIG_H
-#include <sofia-sip/su_config.h>
+#include "sofia-sip/su_config.h"
 #endif
 #ifndef SU_TYPES_H
-#include <sofia-sip/su_types.h>
+#include "sofia-sip/su_types.h"
 #endif
 #ifndef SU_ERRNO_H
-#include <sofia-sip/su_errno.h>
+#include "sofia-sip/su_errno.h"
 #endif
 
 #include <stdio.h>
@@ -481,7 +481,7 @@ SOFIAPUBFUN void su_canonize_sockaddr(su_sockaddr_t *su);
 SOFIA_END_DECLS
 
 #ifndef SU_ADDRINFO_H
-#include <sofia-sip/su_addrinfo.h>
+#include "sofia-sip/su_addrinfo.h"
 #endif
 
 #endif /* !defined(SU_H) */

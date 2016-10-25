@@ -39,8 +39,8 @@
 #include <stdio.h>
 #include <assert.h>
 
-#include <sofia-sip/su_alloc.h>
-#include <sofia-sip/su_types.h>
+#include "sofia-sip/su_alloc.h"
+#include "sofia-sip/su_types.h"
 
 #include "sofia-sip/sdp.h"
 
@@ -174,7 +174,7 @@ static sdp_media_t *media_dup_all(char **pp,
 /**Duplicate an SDP origin description.
  *
  * The function sdp_origin_dup() duplicates (deeply copies) an SDP origin
- * description @a o allocating memory using memory @a home.
+ * descriptionï¿½@a o allocating memory using memory @a home.
  *
  * @param h     Memory home
  * @param o     SDP origin description to be duplicated
@@ -191,7 +191,7 @@ sdp_origin_t *sdp_origin_dup(su_home_t *h, sdp_origin_t const *o)
 /**Duplicate an SDP connection description.
  *
  * The function sdp_connection_dup() duplicates (deeply copies) an SDP
- * connection description @a c allocating memory using memory @a home.
+ * connection descriptionï¿½@a c allocating memory using memory @a home.
  *
  * @param h     Memory home
  * @param c     SDP connection description to be duplicated
@@ -208,7 +208,7 @@ sdp_connection_t *sdp_connection_dup(su_home_t *h, sdp_connection_t const *c)
 /**Duplicate an SDP bandwidth description.
  *
  * The function sdp_bandwidth_dup() duplicates (deeply copies) an SDP
- * bandwidth description @a b allocating memory using memory @a home.
+ * bandwidth descriptionï¿½@a b allocating memory using memory @a home.
  *
  * @param h     Memory home
  * @param b     SDP bandwidth description to be duplicated
@@ -225,7 +225,7 @@ sdp_bandwidth_t *sdp_bandwidth_dup(su_home_t *h, sdp_bandwidth_t const *b)
 /**Duplicate an SDP time description.
  *
  * The function sdp_time_dup() duplicates (deeply copies) an SDP time
- * description @a t allocating memory using memory @a home.
+ * descriptionï¿½@a t allocating memory using memory @a home.
  *
  * @param h  Memory home
  * @param t  SDP time description to be duplicated
@@ -242,7 +242,7 @@ sdp_time_t *sdp_time_dup(su_home_t *h, sdp_time_t const *t)
 /**Duplicate an SDP repeat description.
  *
  * The function sdp_repeat_dup() duplicates (deeply copies) an SDP repeat
- * description @a r allocating memory using memory @a home.
+ * descriptionï¿½@a r allocating memory using memory @a home.
  *
  * @param h  Memory home
  * @param r  SDP repeat description to be duplicated
@@ -259,7 +259,7 @@ sdp_repeat_t *sdp_repeat_dup(su_home_t *h, sdp_repeat_t const *r)
 /**Duplicate an SDP zone description.
  *
  * The function sdp_zone_dup() duplicates (deeply copies) an SDP zone
- * description @a z allocating memory using memory @a home.
+ * descriptionï¿½@a z allocating memory using memory @a home.
  *
  * @param h  Memory home
  * @param z  SDP zone description to be duplicated
@@ -276,7 +276,7 @@ sdp_zone_t *sdp_zone_dup(su_home_t *h, sdp_zone_t const *z)
 /**Duplicate an SDP key description.
  *
  * The function sdp_key_dup() duplicates (deeply copies) an SDP key
- * description @a k allocating memory using memory @a home.
+ * descriptionï¿½@a k allocating memory using memory @a home.
  *
  * @param h  Memory home
  * @param k  SDP key description to be duplicated
@@ -344,7 +344,7 @@ sdp_rtpmap_t *sdp_rtpmap_dup(su_home_t *h, sdp_rtpmap_t const *rm)
 /**Duplicate an SDP media description.
  *
  * The function sdp_media_dup() duplicates (deeply copies) an SDP media
- * description @a m allocating memory using memory @a home.
+ * descriptionï¿½@a m allocating memory using memory @a home.
  *
  * @param h   Memory home
  * @param m   SDP media description to be duplicated
@@ -369,7 +369,7 @@ sdp_media_t *sdp_media_dup(su_home_t *h, sdp_media_t const *m,
 /**Duplicate an SDP media description.
  *
  * The function sdp_media_dup_all() duplicates (deeply copies) a list of SDP
- * media descriptions @a m allocating memory using memory @a home.
+ * media descriptionsï¿½@a m allocating memory using memory @a home.
  *
  * @param h     Memory home
  * @param m     list of SDP media descriptions to be duplicated
@@ -944,7 +944,7 @@ sdp_session_t *session_dup(char **pp, sdp_session_t const *src)
 /**Duplicate an SDP session description.
  *
  * The function sdp_session_dup() duplicates (deeply copies) an SDP
- * session description @a sdp allocating memory using memory @a home.
+ * session descriptionï¿½@a sdp allocating memory using memory @a home.
  *
  * @param h   Memory home
  * @param sdp SDP session description to be duplicated
@@ -1017,7 +1017,7 @@ typedef sdp_session_t sdp_session_without_media_t;
 /**Duplicate an SDP session description without media descriptions.
  *
  * The function sdp_session_dup() duplicates (deeply copies) an SDP session
- * description @a sdp allocating memory using memory @a home. It does not
+ * descriptionï¿½@a sdp allocating memory using memory @a home. It does not
  * copy the media descriptions, however.
  *
  * @param h     memory h
@@ -1037,7 +1037,7 @@ sdp_session_t *sdp_session_dup_without_media(su_home_t *h,
 /* ---------------------------------------------------------------------- */
 /* SDP Tag classes */
 
-#include <sofia-sip/su_tag_class.h>
+#include "sofia-sip/su_tag_class.h"
 
 size_t sdptag_session_xtra(tagi_t const *t, size_t offset)
 {

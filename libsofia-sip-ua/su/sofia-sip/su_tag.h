@@ -35,15 +35,15 @@
  */
 
 #ifndef SU_CONFIG_H
-#include <sofia-sip/su_config.h>
+#include "sofia-sip/su_config.h"
 #endif
 
 #ifndef SU_TYPES_H
-#include <sofia-sip/su_types.h>
+#include "sofia-sip/su_types.h"
 #endif
 
 #ifndef SU_ALLOC_H
-#include <sofia-sip/su_alloc.h>
+#include "sofia-sip/su_alloc.h"
 #endif
 
 #include <stdarg.h>

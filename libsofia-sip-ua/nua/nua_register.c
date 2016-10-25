@@ -39,23 +39,23 @@
 
 #define TP_CLIENT_T          struct register_usage
 
-#include <sofia-sip/string0.h>
-#include <sofia-sip/su_strlst.h>
-#include <sofia-sip/su_uniqueid.h>
-#include <sofia-sip/su_tagarg.h>
+#include "sofia-sip/string0.h"
+#include "sofia-sip/su_strlst.h"
+#include "sofia-sip/su_uniqueid.h"
+#include "sofia-sip/su_tagarg.h"
 
-#include <sofia-sip/sip_protos.h>
-#include <sofia-sip/sip_util.h>
-#include <sofia-sip/sip_status.h>
+#include "sofia-sip/sip_protos.h"
+#include "sofia-sip/sip_util.h"
+#include "sofia-sip/sip_status.h"
 
 #define NTA_UPDATE_MAGIC_T   struct nua_s
 
 #include "nua_stack.h"
 
-#include <sofia-sip/hostdomain.h>
-#include <sofia-sip/nta_tport.h>
-#include <sofia-sip/tport.h>
-#include <sofia-sip/tport_tag.h>
+#include "sofia-sip/hostdomain.h"
+#include "sofia-sip/nta_tport.h"
+#include "sofia-sip/tport.h"
+#include "sofia-sip/tport_tag.h"
 
 #define OUTBOUND_OWNER_T struct nua_handle_s
 
@@ -1134,7 +1134,7 @@ static int nua_register_usage_shutdown(nua_handle_t *nh,
 /* nua_registration_t interface */
 
 #if HAVE_SOFIA_STUN
-#include <sofia-sip/stun.h>
+#include "sofia-sip/stun.h"
 #endif
 
 static void nua_stack_tport_update(nua_t *nua, nta_agent_t *nta);
@@ -1974,7 +1974,7 @@ static int nua_stack_outbound_credentials(nua_handle_t *nh,
 }
 
 #include <ctype.h>
-#include <sofia-sip/bnf.h>
+#include "sofia-sip/bnf.h"
 
 /** @internal Generate a @Contact header. */
 sip_contact_t *nua_handle_contact_by_via(nua_handle_t *nh,

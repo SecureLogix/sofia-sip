@@ -33,20 +33,20 @@
 
 #include "config.h"
 
-#include <sofia-sip/su_tag.h>
-#include <sofia-sip/su_tag_class.h>
-#include <sofia-sip/su_tagarg.h>
+#include "sofia-sip/su_tag.h"
+#include "sofia-sip/su_tag_class.h"
+#include "sofia-sip/su_tagarg.h"
 
-#include <sofia-sip/su_tag_io.h>
+#include "sofia-sip/su_tag_io.h"
 
 #define SU_LOG (nua_log)
-#include <sofia-sip/su_debug.h>
+#include "sofia-sip/su_debug.h"
 
 #define SU_ROOT_MAGIC_T   struct nua_s
 
-#include <sofia-sip/sip_status.h>
-#include <sofia-sip/sip_header.h>
-#include <sofia-sip/nta.h>
+#include "sofia-sip/sip_status.h"
+#include "sofia-sip/sip_header.h"
+#include "sofia-sip/nta.h"
 
 #include "sofia-sip/nua.h"
 #include "sofia-sip/nua_tag.h"
@@ -89,7 +89,7 @@ su_log_t nua_log[] = { SU_LOG_INIT("nua", "NUA_DEBUG", SU_DEBUG) };
  * @param root            Pointer to a root object
  * @param callback        Pointer to event callback function
  * @param magic           Pointer to callback context
- * @param tag, value, ... List of tagged parameters
+ * @param tag,ï¿½value,ï¿½... List of tagged parameters
  *
  * @retval !=NULL a pointer to a @nua stack object
  * @retval NULL upon an error

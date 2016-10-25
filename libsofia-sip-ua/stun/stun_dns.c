@@ -38,12 +38,12 @@
 #define STUN_SRV_SERVICE_TCP "_stun._tcp"
 #define STUN_SRV_SERVICE_UDP "_stun._udp"
 
-#include <sofia-sip/stun.h>
-#include <sofia-sip/su.h>
-#include <sofia-sip/su_alloc.h>
-#include <sofia-sip/su_wait.h>
+#include "sofia-sip/stun.h"
+#include "sofia-sip/su.h"
+#include "sofia-sip/su_alloc.h"
+#include "sofia-sip/su_wait.h"
 #define SRES_CONTEXT_T stun_dns_lookup_t
-#include <sofia-sip/sresolv.h>
+#include "sofia-sip/sresolv.h"
 
 #if HAVE_FUNC
 #elif HAVE_FUNCTION

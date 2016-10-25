@@ -36,11 +36,11 @@
 
 #include "sofia-sip/nua_tag.h"
 
-#include <sofia-sip/msg_header.h>
-#include <sofia-sip/su_tag_class.h>
-#include <sofia-sip/url_tag_class.h>
-#include <sofia-sip/sip_tag_class.h>
-#include <sofia-sip/sip_hclasses.h>
+#include "sofia-sip/msg_header.h"
+#include "sofia-sip/su_tag_class.h"
+#include "sofia-sip/url_tag_class.h"
+#include "sofia-sip/sip_tag_class.h"
+#include "sofia-sip/sip_hclasses.h"
 
 /** @page nua_api_overview NUA API Overview
  *

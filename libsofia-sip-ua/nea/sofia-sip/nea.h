@@ -35,17 +35,17 @@
  */
 
 #ifndef SU_ALLOC_H
-#include <sofia-sip/su_alloc.h>
+#include "sofia-sip/su_alloc.h"
 #endif
 
-#include <sofia-sip/su_tag.h>
+#include "sofia-sip/su_tag.h"
 
 #ifndef NTA_H
-#include <sofia-sip/nta.h>
+#include "sofia-sip/nta.h"
 #endif
 
 #ifndef NEA_TAG_H
-#include <sofia-sip/nea_tag.h>
+#include "sofia-sip/nea_tag.h"
 #endif
 
 SOFIA_BEGIN_DECLS

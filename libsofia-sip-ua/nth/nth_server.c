@@ -32,34 +32,34 @@
 
 #include "config.h"
 
-#include <sofia-sip/string0.h>
-#include <sofia-sip/su.h>
+#include "sofia-sip/string0.h"
+#include "sofia-sip/su.h"
 
 typedef struct server_s server_t;
 
 /** @internal SU timer argument pointer type */
 #define SU_TIMER_ARG_T server_t
 
-#include <sofia-sip/http_header.h>
-#include <sofia-sip/http_status.h>
-#include <sofia-sip/http_tag.h>
+#include "sofia-sip/http_header.h"
+#include "sofia-sip/http_status.h"
+#include "sofia-sip/http_tag.h"
 
 #include "sofia-sip/nth.h"
 
-#include <sofia-sip/msg_date.h>
-#include <sofia-sip/msg_addr.h>
-#include <sofia-sip/su_tagarg.h>
+#include "sofia-sip/msg_date.h"
+#include "sofia-sip/msg_addr.h"
+#include "sofia-sip/su_tagarg.h"
 
-#include <sofia-sip/hostdomain.h>
+#include "sofia-sip/hostdomain.h"
 
 /* We are customer of tport_t */
 #define TP_STACK_T   server_t
 #define TP_MAGIC_T   void
                                      
-#include <sofia-sip/tport.h>
-#include <sofia-sip/htable.h>
+#include "sofia-sip/tport.h"
+#include "sofia-sip/htable.h"
 
-#include <sofia-sip/auth_module.h>
+#include "sofia-sip/auth_module.h"
 
 #include <stddef.h>
 #include <stdlib.h>
@@ -164,7 +164,7 @@ struct nth_request_s
 #ifdef SU_DEBUG_H
 #error <su_debug.h> included directly.
 #endif
-#include <sofia-sip/su_debug.h>
+#include "sofia-sip/su_debug.h"
 
 /**Environment variable determining the debug log level for @b nth
  * module.

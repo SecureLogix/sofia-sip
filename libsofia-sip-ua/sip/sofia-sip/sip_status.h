@@ -38,7 +38,7 @@
  * @date Created: Tue Jun  6 17:43:46 2000 ppessi
  */
 
-#include <sofia-sip/su_config.h>
+#include "sofia-sip/su_config.h"
 
 SOFIA_BEGIN_DECLS
 

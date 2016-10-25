@@ -55,7 +55,7 @@ int tstflags;
 
 #define TSTFLAGS tstflags
 
-#include <sofia-sip/tstdef.h>
+#include "sofia-sip/tstdef.h"
 
 char const *name = "torture_su_port";
 

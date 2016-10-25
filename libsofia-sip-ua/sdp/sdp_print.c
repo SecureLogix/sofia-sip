@@ -33,7 +33,7 @@
 
 #include "config.h"
 
-#include <sofia-sip/su_alloc.h>
+#include "sofia-sip/su_alloc.h"
 
 #include "sofia-sip/sdp.h"
 
@@ -587,6 +587,8 @@ static void print_media(sdp_printer_t *p,
     case sdp_proto_tcp:   proto = "tcp"; break;
     case sdp_proto_udp:   proto = "udp"; break;
     case sdp_proto_rtp:   proto = "RTP/AVP"; break;
+    // CHANGE 8 - dav 20090519
+    case sdp_proto_rtpf:  proto = "RTP/AVPF"; break;
     case sdp_proto_srtp:  proto = "RTP/SAVP"; break;
     case sdp_proto_udptl: proto = "UDPTL"; break;
     case sdp_proto_tls:   proto = "tls"; break;

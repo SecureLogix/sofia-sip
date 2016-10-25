@@ -47,14 +47,14 @@
 #endif
 
 #ifndef MSG_DATE_H
-#include <sofia-sip/msg_date.h>
+#include "sofia-sip/msg_date.h"
 #endif
 
 #ifndef SU_MD5_H
-#include <sofia-sip/su_md5.h>
+#include "sofia-sip/su_md5.h"
 #endif
 
-#include <sofia-sip/htable.h>
+#include "sofia-sip/htable.h"
 
 SOFIA_BEGIN_DECLS
 

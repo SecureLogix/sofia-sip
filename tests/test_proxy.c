@@ -48,17 +48,17 @@ struct binding;
 #define NTA_INCOMING_MAGIC_T struct proxy_tr
 #define SU_TIMER_ARG_T struct proxy_tr
 
-#include <sofia-sip/su_wait.h>
-#include <sofia-sip/nta.h>
-#include <sofia-sip/sip_header.h>
-#include <sofia-sip/sip_status.h>
-#include <sofia-sip/sip_util.h>
-#include <sofia-sip/auth_module.h>
-#include <sofia-sip/su_tagarg.h>
-#include <sofia-sip/msg_addr.h>
-#include <sofia-sip/hostdomain.h>
-#include <sofia-sip/tport.h>
-#include <sofia-sip/nta_tport.h>
+#include "sofia-sip/su_wait.h"
+#include "sofia-sip/nta.h"
+#include "sofia-sip/sip_header.h"
+#include "sofia-sip/sip_status.h"
+#include "sofia-sip/sip_util.h"
+#include "sofia-sip/auth_module.h"
+#include "sofia-sip/su_tagarg.h"
+#include "sofia-sip/msg_addr.h"
+#include "sofia-sip/hostdomain.h"
+#include "sofia-sip/tport.h"
+#include "sofia-sip/nta_tport.h"
 
 #include <stdlib.h>
 #include <assert.h>
@@ -88,7 +88,7 @@ STORAGE void PREFIX ##_remove(T *node)			 \
 extern int LIST_DUMMY_VARIABLE
 
 #include "test_proxy.h"
-#include <sofia-sip/auth_module.h>
+#include "sofia-sip/auth_module.h"
 
 struct proxy {
   su_home_t    home[1];

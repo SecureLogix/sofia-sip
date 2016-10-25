@@ -36,19 +36,19 @@
  */
 
 #ifndef SU_ALLOC_H
-#include <sofia-sip/su_alloc.h>
+#include "sofia-sip/su_alloc.h"
 #endif
 
 #ifndef SU_TAG_H
-#include <sofia-sip/su_tag.h>
+#include "sofia-sip/su_tag.h"
 #endif
 
 #ifndef SIP_H
-#include <sofia-sip/sip.h>
+#include "sofia-sip/sip.h"
 #endif
 
 #ifndef MSG_HEADER_H
-#include <sofia-sip/msg_header.h>
+#include "sofia-sip/msg_header.h"
 #endif
 
 #ifndef _STRING_H
@@ -194,7 +194,7 @@ SOFIAPUBVAR char const * const sip_method_names[];
 
 SOFIA_END_DECLS
 #ifndef SIP_PROTOS_H
-#include <sofia-sip/sip_protos.h>
+#include "sofia-sip/sip_protos.h"
 #endif
 SOFIA_BEGIN_DECLS
 

@@ -33,11 +33,11 @@
 
 #include "config.h"
 
-#include <sofia-sip/sip.h>
-#include <sofia-sip/sip_header.h>
-#include <sofia-sip/sip_util.h>
-#include <sofia-sip/sip_status.h>
-#include <sofia-sip/su_tagarg.h>
+#include "sofia-sip/sip.h"
+#include "sofia-sip/sip_header.h"
+#include "sofia-sip/sip_util.h"
+#include "sofia-sip/sip_status.h"
+#include "sofia-sip/su_tagarg.h"
 
 #include "nea_debug.h"
 
@@ -51,8 +51,8 @@
 #define NTA_INCOMING_MAGIC_T struct nea_sub_s
 #define NTA_OUTGOING_MAGIC_T struct nea_sub_s
 
-#include <sofia-sip/nea.h>
-#include <sofia-sip/htable.h>
+#include "sofia-sip/nea.h"
+#include "sofia-sip/htable.h"
 
 #include <stddef.h>
 #include <stdlib.h>
@@ -315,7 +315,7 @@ void nea_subnode_init(nea_subnode_t *sn, nea_sub_t *s, sip_time_t now)
  * 
  * @param agent       pointer to an @b nta agent object
  * @param root        pointer to an @b root object
- * @param url         url of the server to be created
+ *ï¿½@param url         url of the server to be created
  * @param max_subs    maximum number of subscriptions
  * @param callback    authorization function, 
  *                    or @c NULL if no authorization is required

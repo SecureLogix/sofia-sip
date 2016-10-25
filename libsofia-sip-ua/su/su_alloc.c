@@ -181,7 +181,7 @@
  * @date Created: Thu Aug 19 01:12:25 1999 ppessi
  */
 
-#include <sofia-sip/su_config.h>
+#include "sofia-sip/su_config.h"
 #include "sofia-sip/su_alloc.h"
 #include "sofia-sip/su_alloc_stat.h"
 #include "sofia-sip/su_errno.h"
@@ -629,7 +629,7 @@ int su_home_destructor(su_home_t *home, void (*destructor)(void *))
  * as itself, e.g.,
  * @code
  * #define su_home_desctructor su_home_desctructor
- * #include <sofia-sip/su_alloc.h>
+ * #include "sofia-sip/su_alloc.h"
  * @endcode
  */
 int su_home_desctructor(su_home_t *home, void (*destructor)(void *))

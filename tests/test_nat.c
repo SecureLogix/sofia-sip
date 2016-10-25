@@ -44,12 +44,12 @@ struct binding;
 #define SU_ROOT_MAGIC_T struct nat
 #define SU_WAKEUP_ARG_T struct binding
 
-#include <sofia-sip/su.h>
-#include <sofia-sip/su_errno.h>
-#include <sofia-sip/su_wait.h>
-#include <sofia-sip/su_tagarg.h>
-#include <sofia-sip/su_localinfo.h>
-#include <sofia-sip/su_log.h>
+#include "sofia-sip/su.h"
+#include "sofia-sip/su_errno.h"
+#include "sofia-sip/su_wait.h"
+#include "sofia-sip/su_tagarg.h"
+#include "sofia-sip/su_localinfo.h"
+#include "sofia-sip/su_log.h"
 
 #include <stdlib.h>
 #include <assert.h>

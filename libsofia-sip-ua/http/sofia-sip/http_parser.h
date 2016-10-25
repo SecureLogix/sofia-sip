@@ -34,23 +34,23 @@
  */
 
 #ifndef SU_ALLOC_H
-#include <sofia-sip/su_alloc.h>
+#include "sofia-sip/su_alloc.h"
 #endif
 
 #ifndef MSG_H
-#include <sofia-sip/msg.h>
+#include "sofia-sip/msg.h"
 #endif
 
 #ifndef MSG_PARSER_H
-#include <sofia-sip/msg_parser.h>
+#include "sofia-sip/msg_parser.h"
 #endif
 
 #ifndef HTTP_H
-#include <sofia-sip/http.h>
+#include "sofia-sip/http.h"
 #endif
 
 #ifndef HTTP_HEADER_H
-#include <sofia-sip/http_header.h>
+#include "sofia-sip/http_header.h"
 #endif
 
 SOFIA_BEGIN_DECLS

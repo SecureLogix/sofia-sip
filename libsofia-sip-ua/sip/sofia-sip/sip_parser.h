@@ -41,23 +41,23 @@
  */
 
 #ifndef SU_ALLOC_H
-#include <sofia-sip/su_alloc.h>
+#include "sofia-sip/su_alloc.h"
 #endif
 
 #ifndef MSG_H
-#include <sofia-sip/msg.h>
+#include "sofia-sip/msg.h"
 #endif
 
 #ifndef MSG_PARSER_H
-#include <sofia-sip/msg_parser.h>
+#include "sofia-sip/msg_parser.h"
 #endif
 
 #ifndef SIP_H
-#include <sofia-sip/sip.h>
+#include "sofia-sip/sip.h"
 #endif
 
 #ifndef SIP_HEADER_H
-#include <sofia-sip/sip_header.h>
+#include "sofia-sip/sip_header.h"
 #endif
 
 SOFIA_BEGIN_DECLS

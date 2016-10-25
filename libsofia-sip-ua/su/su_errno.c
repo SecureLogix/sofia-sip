@@ -32,8 +32,8 @@
 
 #include "config.h" 
 
-#include <sofia-sip/su_errno.h>
-#include <sofia-sip/su.h>
+#include "sofia-sip/su_errno.h"
+#include "sofia-sip/su.h"
 
 #include <string.h>
 

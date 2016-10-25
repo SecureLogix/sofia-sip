@@ -40,16 +40,16 @@
 #include <string.h>
 
 #ifndef SU_TYPES_H
-#include <sofia-sip/su_types.h>
+#include "sofia-sip/su_types.h"
 #endif
 #ifndef SU_ALLOC_H
-#include <sofia-sip/su_alloc.h>
+#include "sofia-sip/su_alloc.h"
 #endif
 #ifndef MSG_H
-#include <sofia-sip/msg.h>
+#include "sofia-sip/msg.h"
 #endif
 #ifndef URL_H
-#include <sofia-sip/url.h>
+#include "sofia-sip/url.h"
 #endif
 
 SOFIA_BEGIN_DECLS
@@ -298,7 +298,7 @@ enum {
 SOFIA_END_DECLS
 
 #ifndef MSG_PROTOS_H
-#include <sofia-sip/msg_protos.h>
+#include "sofia-sip/msg_protos.h"
 #endif
 
 #endif /** !defined(MSG_HEADER_H) */

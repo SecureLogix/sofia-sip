@@ -39,26 +39,26 @@
 #endif
 
 #ifndef SU_OS_NW_H
-#include <sofia-sip/su_os_nw.h>
+#include "sofia-sip/su_os_nw.h"
 #endif
 #ifndef SOA_H
 #include "sofia-sip/soa.h"
 #endif
 #ifndef NTA_H
-#include <sofia-sip/nta.h>
+#include "sofia-sip/nta.h"
 #endif
 #ifndef AUTH_CLIENT_H
-#include <sofia-sip/auth_client.h>
+#include "sofia-sip/auth_client.h"
 #endif
 #ifndef NEA_H
-#include <sofia-sip/nea.h>
+#include "sofia-sip/nea.h"
 #endif
 #ifndef NUA_H
-#include <sofia-sip/nua.h>
+#include "sofia-sip/nua.h"
 #endif
 
 #define SU_LOG (nua_log)
-#include <sofia-sip/su_debug.h>
+#include "sofia-sip/su_debug.h"
 
 #ifndef NUA_DIALOG_H
 #define NUA_OWNER_T struct nua_handle_s

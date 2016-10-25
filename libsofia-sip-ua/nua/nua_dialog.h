@@ -38,7 +38,7 @@
 #include <nua_types.h>
 
 #ifndef NTA_H
-#include <sofia-sip/nta.h>
+#include "sofia-sip/nta.h"
 #endif
 
 typedef struct {

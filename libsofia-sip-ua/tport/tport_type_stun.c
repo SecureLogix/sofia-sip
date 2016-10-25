@@ -36,7 +36,7 @@
 
 #define STUN_DISCOVERY_MAGIC_T  struct tport_primary
 
-#include "tport_internal.h"
+#include "sofia-sip/tport_internal.h"
 
 #include <stdlib.h>
 #include <time.h>
@@ -47,7 +47,7 @@
 /* ---------------------------------------------------------------------- */
 /* STUN */
 
-#include <sofia-sip/stun.h>
+#include "sofia-sip/stun.h"
 
 static int tport_udp_init_stun(tport_primary_t *,
 			       tp_name_t tpn[1], 

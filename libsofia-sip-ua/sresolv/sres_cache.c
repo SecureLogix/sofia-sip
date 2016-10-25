@@ -62,10 +62,10 @@ typedef unsigned _int32 uint32_t;
 #include "sofia-resolv/sres_cache.h"
 #include "sofia-resolv/sres_record.h"
 
-#include <sofia-sip/su_alloc.h>
-#include <sofia-sip/su_strlst.h>
-#include <sofia-sip/htable.h>
-#include <sofia-sip/heap.h>
+#include "sofia-sip/su_alloc.h"
+#include "sofia-sip/su_strlst.h"
+#include "sofia-sip/htable.h"
+#include "sofia-sip/heap.h"
 
 #include <stdlib.h>
 #include <stdarg.h>
@@ -81,7 +81,7 @@ typedef unsigned _int32 uint32_t;
 
 #define SU_LOG sresolv_log
 
-#include <sofia-sip/su_debug.h>
+#include "sofia-sip/su_debug.h"
 
 typedef struct sres_rr_hash_entry_s sres_rr_hash_entry_t;
 

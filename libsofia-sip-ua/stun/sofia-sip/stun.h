@@ -34,17 +34,17 @@
  * @author Kai Vehmanen <kai.vehmanen@nokia.com>
  */
 
-#include <sofia-sip/stun_common.h>
+#include "sofia-sip/stun_common.h"
 
 #ifndef SU_WAIT_H
-#include <sofia-sip/su_wait.h>
+#include "sofia-sip/su_wait.h"
 #endif
 
 #ifndef SU_TAG_H
-#include <sofia-sip/su_tag.h>
+#include "sofia-sip/su_tag.h"
 #endif
 
-#include <sofia-sip/su_localinfo.h>
+#include "sofia-sip/su_localinfo.h"
 
 
 SOFIA_BEGIN_DECLS

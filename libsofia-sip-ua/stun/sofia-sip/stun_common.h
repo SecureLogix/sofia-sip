@@ -36,7 +36,7 @@
  * 
  */
 
-#include <sofia-sip/su_localinfo.h>
+#include "sofia-sip/su_localinfo.h"
 
 SOFIA_BEGIN_DECLS
 

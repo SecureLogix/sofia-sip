@@ -35,15 +35,15 @@
  */
 
 #ifndef SIP_H
-#include <sofia-sip/sip.h>
+#include "sofia-sip/sip.h"
 #endif
 
 #ifndef STRING0_H
-#include <sofia-sip/string0.h>
+#include "sofia-sip/string0.h"
 #endif
 
 #ifndef MSG_HEADER_H
-#include <sofia-sip/msg_header.h>
+#include "sofia-sip/msg_header.h"
 #endif
 
 SOFIA_BEGIN_DECLS

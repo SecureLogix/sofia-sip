@@ -35,7 +35,7 @@
  * #include <sys/types.h>
  * #include <sys/socket.h>
  * #include <netinet/in.h>
- * #include <sofia-resolv/sres_cache.h>
+ * #include "sofia-resolv/sres_cache.h"
  * @endcode
  *
  */

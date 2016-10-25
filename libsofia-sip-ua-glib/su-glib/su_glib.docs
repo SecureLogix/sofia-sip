@@ -26,7 +26,7 @@ The su-glib module contains the public header files as follows:
 Below is a simple example of how to use su-glib:
 @code
   #include <glib.h>
-  #include <sofia-sip/su_glib.h>
+  #include "sofia-sip/su_glib.h"
 
   /* ... */
   

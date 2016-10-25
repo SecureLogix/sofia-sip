@@ -48,7 +48,7 @@
 #include "sofia-sip/htable.h"
 
 #define TSTFLAGS flags
-#include <sofia-sip/tstdef.h>
+#include "sofia-sip/tstdef.h"
 
 char const name[] = "htable_test";
 

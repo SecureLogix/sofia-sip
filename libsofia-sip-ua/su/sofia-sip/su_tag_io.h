@@ -36,10 +36,10 @@
  */
 
 #ifndef SU_TAG_H
-#include <sofia-sip/su_tag.h>
+#include "sofia-sip/su_tag.h"
 #endif
 #ifndef SU_H
-#include <sofia-sip/su.h>
+#include "sofia-sip/su.h"
 #endif
 
 #include <stdio.h>

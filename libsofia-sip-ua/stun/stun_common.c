@@ -756,9 +756,9 @@ int stun_encode_message(stun_msg_t *msg, stun_buffer_t *pwd) {
   return 0;
 }
 
-#include <sofia-sip/su.h>
-#include <sofia-sip/su_debug.h>
-#include <sofia-sip/su_localinfo.h>
+#include "sofia-sip/su.h"
+#include "sofia-sip/su_debug.h"
+#include "sofia-sip/su_localinfo.h"
 
 char *stun_determine_ip_address(int family)
 {

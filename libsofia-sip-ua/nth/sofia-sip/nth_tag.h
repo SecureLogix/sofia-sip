@@ -35,15 +35,15 @@
  */
 
 #ifndef SU_TAG_H
-#include <sofia-sip/su_tag.h>
+#include "sofia-sip/su_tag.h"
 #endif
 
 #ifndef URL_TAG_H
-#include <sofia-sip/url_tag.h>
+#include "sofia-sip/url_tag.h"
 #endif
 
 #ifndef HTTP_TAG_H
-#include <sofia-sip/http_tag.h>
+#include "sofia-sip/http_tag.h"
 #endif
 
 SOFIA_BEGIN_DECLS

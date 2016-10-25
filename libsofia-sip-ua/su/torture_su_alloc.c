@@ -38,13 +38,13 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include <sofia-sip/su_alloc.h>
-#include <sofia-sip/su_errno.h>
-#include <sofia-sip/su_strlst.h>
-#include <sofia-sip/su_alloc_stat.h>
+#include "sofia-sip/su_alloc.h"
+#include "sofia-sip/su_errno.h"
+#include "sofia-sip/su_strlst.h"
+#include "sofia-sip/su_alloc_stat.h"
 
 #define TSTFLAGS tstflags
-#include <sofia-sip/tstdef.h>
+#include "sofia-sip/tstdef.h"
 
 int tstflags;
 
@@ -519,7 +519,7 @@ static int test_strlst(void)
   END();
 }
 
-#include <sofia-sip/su_vector.h>
+#include "sofia-sip/su_vector.h"
 
 typedef struct test_data_s {
   su_home_t test_home[1];

@@ -31,22 +31,22 @@
 
 #include "config.h"
 
-#include <sofia-sip/su.h>
-#include <sofia-sip/su_md5.h>
+#include "sofia-sip/su.h"
+#include "sofia-sip/su_md5.h"
 
 #include "sofia-sip/auth_ntlm.h"
 #include "sofia-sip/auth_client.h"
 #include "sofia-sip/auth_client_plugin.h"
 
-#include <sofia-sip/msg_header.h>
+#include "sofia-sip/msg_header.h"
 
-#include <sofia-sip/auth_digest.h>
+#include "sofia-sip/auth_digest.h"
 
-#include <sofia-sip/base64.h>
-#include <sofia-sip/su_uniqueid.h>
-#include <sofia-sip/string0.h>
+#include "sofia-sip/base64.h"
+#include "sofia-sip/su_uniqueid.h"
+#include "sofia-sip/string0.h"
 
-#include <sofia-sip/su_debug.h>
+#include "sofia-sip/su_debug.h"
 
 #include <stddef.h>
 #include <stdlib.h>

@@ -34,9 +34,9 @@
 
 #include "config.h"
 
-#include "tport_internal.h"
+#include "sofia-sip/tport_internal.h"
 
-#include <sofia-sip/string0.h>
+#include "sofia-sip/string0.h"
 #include <stdlib.h>
 #include <time.h>
 #include <assert.h>

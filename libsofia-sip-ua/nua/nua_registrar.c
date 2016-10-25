@@ -39,10 +39,10 @@
 
 #include <assert.h>
 
-#include <sofia-sip/string0.h>
-#include <sofia-sip/sip_protos.h>
-#include <sofia-sip/sip_status.h>
-#include <sofia-sip/sip_util.h>
+#include "sofia-sip/string0.h"
+#include "sofia-sip/sip_protos.h"
+#include "sofia-sip/sip_status.h"
+#include "sofia-sip/sip_util.h"
 
 #define NTA_INCOMING_MAGIC_T struct nua_handle_s
 #define NTA_RELIABLE_MAGIC_T struct nua_handle_s

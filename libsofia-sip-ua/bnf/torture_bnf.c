@@ -45,7 +45,7 @@
 static int test_flags = 0;
 #define TSTFLAGS test_flags
 
-#include <sofia-sip/tstdef.h>
+#include "sofia-sip/tstdef.h"
 
 char const name[] = "torture_bnf";
 
@@ -247,7 +247,7 @@ int ip_test(void)
     TEST_S(s, output);							\
     TEST_S(s0, canonic); } while(0)
 
-#include <sofia-sip/hostdomain.h>
+#include "sofia-sip/hostdomain.h"
 
 int host_test(void)
 {

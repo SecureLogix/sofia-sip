@@ -35,13 +35,13 @@
  */
 
 #ifndef SU_CONFIG_H
-#include <sofia-sip/su_config.h>
+#include "sofia-sip/su_config.h"
 #endif
 #ifndef NTA_H
-#include <sofia-sip/nta.h>
+#include "sofia-sip/nta.h"
 #endif
 #ifndef AUTH_CLIENT_H
-#include <sofia-sip/auth_client.h>
+#include "sofia-sip/auth_client.h"
 #endif
 
 SOFIA_BEGIN_DECLS

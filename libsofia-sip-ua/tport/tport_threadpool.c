@@ -40,7 +40,7 @@
 #define SU_WAKEUP_ARG_T         struct tport_s
 #define SU_MSG_ARG_T            union tport_su_msg_arg
 
-#include "tport_internal.h"
+#include "sofia-sip/tport_internal.h"
 
 #include <stdlib.h>
 #include <time.h>

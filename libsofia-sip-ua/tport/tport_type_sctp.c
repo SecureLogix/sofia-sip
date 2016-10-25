@@ -39,7 +39,7 @@
 
 #if HAVE_SCTP
 
-#include "tport_internal.h"
+#include "sofia-sip/tport_internal.h"
 
 #if HAVE_NETINET_SCTP_H
 #include <netinet/sctp.h>

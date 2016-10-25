@@ -42,11 +42,11 @@
 #include <limits.h>
 #include <stdlib.h>
 
-#include <sofia-sip/su_time.h>
+#include "sofia-sip/su_time.h"
 
 #define TSTFLAGS flags
 
-#include <sofia-sip/tstdef.h>
+#include "sofia-sip/tstdef.h"
 
 char const *name = "torture_su_time.c";
 
@@ -128,8 +128,8 @@ int test1(int flags)
   END();
 }
 
-#include <sofia-sip/su_uniqueid.h>
-#include <sofia-sip/su.h>			/* htonl() and guys */
+#include "sofia-sip/su_uniqueid.h"
+#include "sofia-sip/su.h"			/* htonl() and guys */
 
 int test2(int flags)
 {

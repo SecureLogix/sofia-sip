@@ -48,7 +48,7 @@ int tstflags = 0;
 
 char const *name = "torture_base64";
 
-#include <sofia-sip/tstdef.h>
+#include "sofia-sip/tstdef.h"
 
 char const constant[] = "not changed";
 

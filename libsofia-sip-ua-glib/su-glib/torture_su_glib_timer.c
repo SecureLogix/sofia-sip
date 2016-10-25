@@ -54,7 +54,7 @@ struct tester;
 #include "sofia-sip/su_wait.h"
 #include "sofia-sip/su_log.h"
 
-#include <sofia-sip/su_glib.h>
+#include "sofia-sip/su_glib.h"
 
 struct timing
 {

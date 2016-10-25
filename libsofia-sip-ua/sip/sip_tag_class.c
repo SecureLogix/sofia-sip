@@ -35,12 +35,12 @@
 
 #include "sofia-sip/sip_parser.h"
 
-#include <sofia-sip/su_tag_class.h>
-#include <sofia-sip/su_tag_inline.h>
-#include <sofia-sip/sip_tag_class.h>
-#include <sofia-sip/sip_tag.h>
-#include <sofia-sip/su_tagarg.h>
-#include <sofia-sip/su_strlst.h>
+#include "sofia-sip/su_tag_class.h"
+#include "sofia-sip/su_tag_inline.h"
+#include "sofia-sip/sip_tag_class.h"
+#include "sofia-sip/sip_tag.h"
+#include "sofia-sip/su_tagarg.h"
+#include "sofia-sip/su_strlst.h"
 
 #include <stdio.h>
 #include <ctype.h>

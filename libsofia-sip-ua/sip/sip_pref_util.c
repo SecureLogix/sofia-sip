@@ -41,9 +41,9 @@
 #include <float.h>
 
 #include "sofia-sip/sip_parser.h"
-#include <sofia-sip/sip_header.h>
-#include <sofia-sip/sip_util.h>
-#include <sofia-sip/sip_status.h>
+#include "sofia-sip/sip_header.h"
+#include "sofia-sip/sip_util.h"
+#include "sofia-sip/sip_status.h"
 
 static double parse_number(char const *str, char **return_end);
 

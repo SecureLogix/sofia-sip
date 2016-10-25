@@ -35,8 +35,8 @@
 
 #include "test_nua.h"
 
-#include <sofia-sip/tport_tag.h>
-#include <sofia-sip/auth_module.h>
+#include "sofia-sip/tport_tag.h"
+#include "sofia-sip/auth_module.h"
 
 #if HAVE_FUNC
 #elif HAVE_FUNCTION

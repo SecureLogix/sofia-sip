@@ -39,18 +39,18 @@
 
 #include <assert.h>
 
-#include <sofia-sip/string0.h>
-#include <sofia-sip/su_uniqueid.h>
+#include "sofia-sip/string0.h"
+#include "sofia-sip/su_uniqueid.h"
 
-#include <sofia-sip/sip_protos.h>
-#include <sofia-sip/sip_status.h>
+#include "sofia-sip/sip_protos.h"
+#include "sofia-sip/sip_status.h"
 
 #define NUA_OWNER_T su_home_t
 
 #include "nua_dialog.h"
 
 #define SU_LOG (nua_log)
-#include <sofia-sip/su_debug.h>
+#include "sofia-sip/su_debug.h"
 
 #ifndef NONE
 #define NONE ((void *)-1)

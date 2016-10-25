@@ -35,7 +35,7 @@
 
 #include "config.h"
 
-#include <sofia-sip/su_alloc.h>
+#include "sofia-sip/su_alloc.h"
 
 #include "sofia-sip/msg.h"
 #include "sofia-sip/bnf.h"

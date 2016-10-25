@@ -32,7 +32,7 @@ TESTS =			test_tport
 
 nobase_include_sofia_HEADERS = \
 			sofia-sip/tport.h sofia-sip/tport_tag.h \
-			sofia-sip/tport_plugins.h
+			sofia-sip/tport_plugins.h sofia-sip/tport_internal.h
 
 TLS_SRC =		tport_type_tls.c tport_tls.c tport_tls.h
 if HAVE_TLS

@@ -34,8 +34,8 @@
 #include "config.h"
 
 #include "test_nua.h"
-#include <sofia-sip/su_tag_class.h>
-#include <sofia-sip/nea.h>
+#include "sofia-sip/su_tag_class.h"
+#include "sofia-sip/nea.h"
 
 #if !HAVE_MEMMEM
 void *memmem(const void *haystack, size_t haystacklen,

@@ -39,7 +39,7 @@ typedef struct client_t client_t;
 
 #define SU_ROOT_MAGIC_T      agent_t
 
-#include <sofia-sip/su_wait.h>
+#include "sofia-sip/su_wait.h"
 
 #include <msg_internal.h>
 
@@ -52,18 +52,18 @@ typedef struct client_t client_t;
 
 #include "sofia-sip/nta.h"
 #include "nta_internal.h"
-#include <sofia-sip/sip_header.h>
-#include <sofia-sip/sip_tag.h>
-#include <sofia-sip/sip_status.h>
-#include <sofia-sip/tport.h>
-#include <sofia-sip/htable.h>
-#include <sofia-sip/sresolv.h>
-#include <sofia-sip/su_log.h>
-#include <sofia-sip/sofia_features.h>
-#include <sofia-sip/hostdomain.h>
-#include <sofia-sip/tport.h>
+#include "sofia-sip/sip_header.h"
+#include "sofia-sip/sip_tag.h"
+#include "sofia-sip/sip_status.h"
+#include "sofia-sip/tport.h"
+#include "sofia-sip/htable.h"
+#include "sofia-sip/sresolv.h"
+#include "sofia-sip/su_log.h"
+#include "sofia-sip/sofia_features.h"
+#include "sofia-sip/hostdomain.h"
+#include "sofia-sip/tport.h"
 
-#include <sofia-sip/string0.h>
+#include "sofia-sip/string0.h"
 
 #include <stddef.h>
 #include <stdlib.h>
@@ -83,7 +83,7 @@ SOFIAPUBVAR su_log_t tport_log[];
 int tstflags = 0;
 #define TSTFLAGS tstflags
 
-#include <sofia-sip/tstdef.h>
+#include "sofia-sip/tstdef.h"
 
 #if HAVE_FUNC
 #elif HAVE_FUNCTION
@@ -541,7 +541,7 @@ int client_run_until_canceled(client_t *c, int expected)
 }
 
 
-#include <sofia-sip/msg_mclass.h>
+#include "sofia-sip/msg_mclass.h"
 
 int test_init(agent_t *ag, char const *resolv_conf)
 {
@@ -944,7 +944,7 @@ static int test_bad_messages(agent_t *ag)
 static unsigned char const code[] = 
   "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
-#include <sofia-sip/su_uniqueid.h>
+#include "sofia-sip/su_uniqueid.h"
 
 sip_payload_t *test_payload(su_home_t *home, size_t size)
 {

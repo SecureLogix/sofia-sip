@@ -37,12 +37,12 @@
 
 #include "test_s2.h"
 
-#include <sofia-sip/sip_status.h>
-#include <sofia-sip/sip_header.h>
-#include <sofia-sip/soa.h>
-#include <sofia-sip/su_tagarg.h>
-#include <sofia-sip/su_tag_io.h>
-#include <sofia-sip/su_log.h>
+#include "sofia-sip/sip_status.h"
+#include "sofia-sip/sip_header.h"
+#include "sofia-sip/soa.h"
+#include "sofia-sip/su_tagarg.h"
+#include "sofia-sip/su_tag_io.h"
+#include "sofia-sip/su_log.h"
 
 #include <stdlib.h>
 #include <string.h>

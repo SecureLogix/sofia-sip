@@ -38,11 +38,11 @@
 #include <stdio.h>
 
 #ifndef STRING0_H
-#include <sofia-sip/string0.h>
+#include "sofia-sip/string0.h"
 #endif
 
 #ifndef SIP_H
-#include <sofia-sip/sip.h>
+#include "sofia-sip/sip.h"
 #endif
 
 SOFIA_BEGIN_DECLS

@@ -31,11 +31,11 @@
 
 #include "config.h"
 
-#include <sofia-sip/stun.h>
-#include <sofia-sip/su_tagarg.h>
+#include "sofia-sip/stun.h"
+#include "sofia-sip/su_tagarg.h"
 
 #define TPORT_STUN_SERVER_T stun_mini_t
-#include "tport_internal.h"
+#include "sofia-sip/tport_internal.h"
 #include "sofia-sip/msg_buffer.h"
 #include "sofia-sip/msg_addr.h"
 

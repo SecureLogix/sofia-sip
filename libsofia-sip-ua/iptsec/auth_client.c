@@ -33,23 +33,23 @@
 
 #define SOFIA_EXTEND_AUTH_CLIENT 1
 
-#include <sofia-sip/su.h>
-#include <sofia-sip/su_md5.h>
+#include "sofia-sip/su.h"
+#include "sofia-sip/su_md5.h"
 
 #include "sofia-sip/auth_common.h"
 #include "sofia-sip/auth_client.h"
 #include "sofia-sip/auth_client_plugin.h"
 
-#include <sofia-sip/msg_types.h>
-#include <sofia-sip/msg_header.h>
+#include "sofia-sip/msg_types.h"
+#include "sofia-sip/msg_header.h"
 
-#include <sofia-sip/auth_digest.h>
+#include "sofia-sip/auth_digest.h"
 
-#include <sofia-sip/base64.h>
-#include <sofia-sip/su_uniqueid.h>
-#include <sofia-sip/string0.h>
+#include "sofia-sip/base64.h"
+#include "sofia-sip/su_uniqueid.h"
+#include "sofia-sip/string0.h"
 
-#include <sofia-sip/su_debug.h>
+#include "sofia-sip/su_debug.h"
 
 #include <stddef.h>
 #include <stdlib.h>
@@ -1043,7 +1043,7 @@ void ca_destroy(su_home_t *home, auth_client_t *ca)
 
 
 #if HAVE_SOFIA_SIP
-#include <sofia-sip/sip.h>
+#include "sofia-sip/sip.h"
 
 /**Authorize a SIP request.
  *

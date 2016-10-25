@@ -46,7 +46,7 @@
 #include <assert.h>
 #include <errno.h>
 
-#include <sofia-sip/string0.h>
+#include "sofia-sip/string0.h"
 
 /** @internal SU message argument structure type */
 #define SU_MSG_ARG_T   union sm_arg_u
@@ -57,16 +57,16 @@
 #define MSG_PUB_T struct http_s
 
 #include "sofia-sip/nth.h"
-#include <sofia-sip/http_header.h>
-#include <sofia-sip/http_tag.h>
-#include <sofia-sip/http_status.h>
+#include "sofia-sip/http_header.h"
+#include "sofia-sip/http_tag.h"
+#include "sofia-sip/http_status.h"
 
-#include <sofia-sip/hostdomain.h>
+#include "sofia-sip/hostdomain.h"
 
-#include <sofia-sip/msg_addr.h>
-#include <sofia-sip/su_tagarg.h>
+#include "sofia-sip/msg_addr.h"
+#include "sofia-sip/su_tagarg.h"
 
-#include <sofia-sip/auth_client.h>
+#include "sofia-sip/auth_client.h"
 
 /* We are customer of tport_t */
 #define TP_STACK_T   nth_engine_t
@@ -74,9 +74,9 @@
 #define TP_CLIENT_T  nth_client_t
 
 #ifndef TPORT_H
-#include <sofia-sip/tport.h>
+#include "sofia-sip/tport.h"
 #endif
-#include <sofia-sip/htable.h>
+#include "sofia-sip/htable.h"
 
 #define HE_TIMER HE_TIMER
 enum { HE_TIMER = 1000 };
@@ -164,7 +164,7 @@ struct nth_client_s {
 #ifdef SU_DEBUG_H
 #error <su_debug.h> included directly.
 #endif
-#include <sofia-sip/su_debug.h>
+#include "sofia-sip/su_debug.h"
 
 /**@var NTH_DEBUG
  *

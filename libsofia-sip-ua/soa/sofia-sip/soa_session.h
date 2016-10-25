@@ -40,10 +40,10 @@
 #include "sofia-sip/soa_tag.h"
 #endif
 #ifndef SDP_H
-#include <sofia-sip/sdp.h>
+#include "sofia-sip/sdp.h"
 #endif
 #ifndef SU_STRLST_H
-#include <sofia-sip/su_strlst.h>
+#include "sofia-sip/su_strlst.h"
 #endif
 
 SOFIA_BEGIN_DECLS
@@ -270,7 +270,7 @@ SOFIAPUBFUN int soa_init_sdp_connection(soa_session_t *,
 #ifdef SU_DEBUG_H
 #error <su_debug.h> included directly.
 #endif
-#include <sofia-sip/su_debug.h>
+#include "sofia-sip/su_debug.h"
 SOFIAPUBVAR su_log_t soa_log[];
 
 SOFIA_END_DECLS

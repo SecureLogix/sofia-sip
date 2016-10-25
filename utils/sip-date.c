@@ -78,9 +78,9 @@
 #include <stddef.h>
 #include <stdlib.h>
 
-#include <sofia-sip/sip.h>
-#include <sofia-sip/sip_header.h>
-#include <sofia-sip/msg_date.h>
+#include "sofia-sip/sip.h"
+#include "sofia-sip/sip_header.h"
+#include "sofia-sip/msg_date.h"
 
 void usage(void)
 {

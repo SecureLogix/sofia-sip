@@ -44,21 +44,21 @@ struct call;
 #include "sofia-sip/nua.h"
 #include "sofia-sip/sip_status.h"
 
-#include <sofia-sip/sdp.h>
-#include <sofia-sip/sip_header.h>
+#include "sofia-sip/sdp.h"
+#include "sofia-sip/sip_header.h"
 
-#include <sofia-sip/su_log.h>
-#include <sofia-sip/su_tagarg.h>
-#include <sofia-sip/su_tag_io.h>
-#include <sofia-sip/nua_tag.h>
+#include "sofia-sip/su_log.h"
+#include "sofia-sip/su_tagarg.h"
+#include "sofia-sip/su_tag_io.h"
+#include "sofia-sip/nua_tag.h"
 
 #if __APPLE_CC__
-#include <sofia-sip/su_osx_runloop.h>
+#include "sofia-sip/su_osx_runloop.h"
 #endif
 
 #include "test_proxy.h"
 #include "test_nat.h"
-#include <sofia-sip/auth_module.h>
+#include "sofia-sip/auth_module.h"
 
 #include <stddef.h>
 #include <stdlib.h>
@@ -73,7 +73,7 @@ extern int print_headings;
 extern int tstflags;
 #define TSTFLAGS tstflags
 
-#include <sofia-sip/tstdef.h>
+#include "sofia-sip/tstdef.h"
 
 #define TEST_E(a, b) TEST_S(nua_event_name(a), nua_event_name(b))
 

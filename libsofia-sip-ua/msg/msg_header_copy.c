@@ -41,9 +41,9 @@
 #include <assert.h>
 #include <stdio.h>
 
-#include <sofia-sip/su_alloc.h>
+#include "sofia-sip/su_alloc.h"
 
-#include <sofia-sip/su.h>
+#include "sofia-sip/su.h"
 
 #include "msg_internal.h"
 #include "sofia-sip/msg.h"

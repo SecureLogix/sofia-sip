@@ -37,7 +37,7 @@
 #include <stdarg.h>
 #include <string.h>
 
-#include <sofia-sip/su.h>
+#include "sofia-sip/su.h"
 
 #define TAG_NAMESPACE "msg"
 
@@ -45,9 +45,9 @@
 #include "sofia-sip/msg_header.h"
 #include "sofia-sip/msg_parser.h"
 
-#include <sofia-sip/su_tag_class.h>
-#include <sofia-sip/su_tag_inline.h>
-#include <sofia-sip/su_tagarg.h>
+#include "sofia-sip/su_tag_class.h"
+#include "sofia-sip/su_tag_inline.h"
+#include "sofia-sip/su_tagarg.h"
 #include "sofia-sip/msg_tag_class.h"
 
 #define NONE ((void*)-1)

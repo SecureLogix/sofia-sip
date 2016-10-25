@@ -32,18 +32,18 @@
 
 #include "config.h"
 
-#include <sofia-sip/string0.h>
-#include <sofia-sip/su_strlst.h>
-#include <sofia-sip/token64.h>
-#include <sofia-sip/su_tagarg.h>
-#include <sofia-sip/su_tag_inline.h>
+#include "sofia-sip/string0.h"
+#include "sofia-sip/su_strlst.h"
+#include "sofia-sip/token64.h"
+#include "sofia-sip/su_tagarg.h"
+#include "sofia-sip/su_tag_inline.h"
 
-#include <sofia-sip/bnf.h>
+#include "sofia-sip/bnf.h"
 
-#include <sofia-sip/sip_protos.h>
-#include <sofia-sip/sip_util.h>
-#include <sofia-sip/sip_status.h>
-#include <sofia-sip/msg_parser.h>
+#include "sofia-sip/sip_protos.h"
+#include "sofia-sip/sip_util.h"
+#include "sofia-sip/sip_status.h"
+#include "sofia-sip/msg_parser.h"
 
 #include "nua_stack.h"
 

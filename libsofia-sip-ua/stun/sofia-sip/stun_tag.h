@@ -34,10 +34,10 @@
  */
 
 #ifndef SU_TAG_H
-#include <sofia-sip/su_tag.h>
+#include "sofia-sip/su_tag.h"
 #endif
 #ifndef SU_TAG_IO_H
-#include <sofia-sip/su_tag_io.h>
+#include "sofia-sip/su_tag_io.h"
 #endif
 
 SOFIA_BEGIN_DECLS

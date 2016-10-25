@@ -43,7 +43,7 @@
 #define TAG_NAMESPACE "tp"
 
 #include "sofia-sip/tport.h"
-#include <sofia-sip/su_tag_class.h>
+#include "sofia-sip/su_tag_class.h"
 
 /* ==== Globals ========================================================== */
 

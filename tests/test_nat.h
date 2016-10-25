@@ -25,8 +25,8 @@
 #ifndef TEST_NAT_H
 #define TEST_NAT_H
 
-#include <sofia-sip/su_wait.h>
-#include <sofia-sip/nta.h>
+#include "sofia-sip/su_wait.h"
+#include "sofia-sip/nta.h"
 
 SOFIA_BEGIN_DECLS
 

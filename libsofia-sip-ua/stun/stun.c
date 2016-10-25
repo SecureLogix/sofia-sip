@@ -44,15 +44,15 @@
 
 #define SU_ROOT_MAGIC_T struct stun_magic_t
 
-#include <sofia-sip/stun.h>
+#include "sofia-sip/stun.h"
 #include "stun_internal.h"
-#include <sofia-sip/stun_tag.h>
+#include "sofia-sip/stun_tag.h"
 
-#include <sofia-sip/su_alloc.h>
-#include <sofia-sip/su_tagarg.h>
-#include <sofia-sip/su_log.h>
-#include <sofia-sip/su.h>
-#include <sofia-sip/su_localinfo.h>
+#include "sofia-sip/su_alloc.h"
+#include "sofia-sip/su_tagarg.h"
+#include "sofia-sip/su_log.h"
+#include "sofia-sip/su.h"
+#include "sofia-sip/su_localinfo.h"
 
 #if HAVE_NETINET_TCP_H
 #include <netinet/tcp.h>

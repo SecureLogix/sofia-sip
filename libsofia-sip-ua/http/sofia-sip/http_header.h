@@ -36,19 +36,19 @@
  */
 
 #ifndef SU_ALLOC_H
-#include <sofia-sip/su_alloc.h>
+#include "sofia-sip/su_alloc.h"
 #endif
 
 #ifndef SU_TAG_H
-#include <sofia-sip/su_tag.h>
+#include "sofia-sip/su_tag.h"
 #endif
 
 #ifndef HTTP_H
-#include <sofia-sip/http.h>
+#include "sofia-sip/http.h"
 #endif
 
 #ifndef MSG_HEADER_H
-#include <sofia-sip/msg_header.h>
+#include "sofia-sip/msg_header.h"
 #endif
 
 SOFIA_BEGIN_DECLS
@@ -265,7 +265,7 @@ http_separator_t *http_separator_create(su_home_t *home)
 SOFIA_END_DECLS
 
 #ifndef HTTP_PROTOS_H
-#include <sofia-sip/http_protos.h>
+#include "sofia-sip/http_protos.h"
 #endif
 
 #endif /* !defined(HTTP_HEADER_H) */

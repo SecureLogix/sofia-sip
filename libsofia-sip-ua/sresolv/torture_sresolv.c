@@ -59,12 +59,12 @@ typedef unsigned _int32 uint32_t;
 #include <ws2tcpip.h>
 #endif
 
-#include <sofia-resolv/sres.h>
-#include <sofia-resolv/sres_async.h>
-#include <sofia-resolv/sres_record.h>
-#include <sofia-resolv/sres_cache.h>
+#include "sofia-resolv/sres.h"
+#include "sofia-resolv/sres_async.h"
+#include "sofia-resolv/sres_record.h"
+#include "sofia-resolv/sres_cache.h"
 
-#include <sofia-sip/su_alloc.h>
+#include "sofia-sip/su_alloc.h"
 
 #include <time.h>
 #include <assert.h>
@@ -81,7 +81,7 @@ typedef unsigned _int32 uint32_t;
 #define TSTFLAGS tstflags
 int tstflags, o_timing;
 
-#include <sofia-sip/tstdef.h>
+#include "sofia-sip/tstdef.h"
 
 char const name[] = "torture_sresolv";
 
@@ -381,7 +381,7 @@ void usage(int exitcode)
   exit(exitcode);
 }
 
-#include <sofia-sip/su_log.h>
+#include "sofia-sip/su_log.h"
 
 extern su_log_t sresolv_log[];
 

@@ -38,12 +38,12 @@
 
 #include "test_s2.h"
 
-#include <sofia-sip/sip_header.h>
-#include <sofia-sip/sip_status.h>
-#include <sofia-sip/msg_addr.h>
-#include <sofia-sip/su_log.h>
-#include <sofia-sip/su_tagarg.h>
-#include <sofia-sip/su_alloc.h>
+#include "sofia-sip/sip_header.h"
+#include "sofia-sip/sip_status.h"
+#include "sofia-sip/msg_addr.h"
+#include "sofia-sip/su_log.h"
+#include "sofia-sip/su_tagarg.h"
+#include "sofia-sip/su_alloc.h"
 
 #include <stdlib.h>
 #include <string.h>
@@ -1001,7 +1001,7 @@ s2_setup_tport(char const * const *protocols,
 /* ---------------------------------------------------------------------- */
 /* S2 DNS server */
 
-#include <sofia-resolv/sres_record.h>
+#include "sofia-resolv/sres_record.h"
 
 extern uint16_t _sres_default_port;
 
@@ -1472,7 +1472,7 @@ s2_teardown(void)
 
 /* ====================================================================== */
 
-#include <sofia-sip/sresolv.h>
+#include "sofia-sip/sresolv.h"
 
 nua_t *s2_nua_setup(tag_type_t tag, tag_value_t value, ...)
 {

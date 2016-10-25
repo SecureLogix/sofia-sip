@@ -36,11 +36,11 @@
  */
 
 #ifndef MSG_TYPES_H
-#include <sofia-sip/msg_types.h>
+#include "sofia-sip/msg_types.h"
 #endif
 
 #ifndef URL_H
-#include <sofia-sip/url.h>
+#include "sofia-sip/url.h"
 #endif
 
 SOFIA_BEGIN_DECLS

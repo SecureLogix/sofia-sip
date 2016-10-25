@@ -43,9 +43,9 @@
 #include <limits.h>
 #include <ctype.h>
 
-#include <sofia-sip/su_alloc.h>
+#include "sofia-sip/su_alloc.h"
 
-#include <sofia-sip/msg_mclass_hash.h>
+#include "sofia-sip/msg_mclass_hash.h"
 
 int main(int argc, char *argv[])
 {

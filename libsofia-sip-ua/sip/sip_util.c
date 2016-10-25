@@ -37,17 +37,17 @@
 #define MSG_PUB_T       struct sip_s
 #define MSG_HDR_T       union sip_header_u
 
-#include <sofia-sip/su_alloc.h>
-#include <sofia-sip/su_strlst.h>
-#include <sofia-sip/string0.h>
+#include "sofia-sip/su_alloc.h"
+#include "sofia-sip/su_strlst.h"
+#include "sofia-sip/string0.h"
 
 #include "sofia-sip/sip_parser.h"
-#include <sofia-sip/sip_header.h>
-#include <sofia-sip/sip_util.h>
-#include <sofia-sip/sip_status.h>
+#include "sofia-sip/sip_header.h"
+#include "sofia-sip/sip_util.h"
+#include "sofia-sip/sip_status.h"
 
-#include <sofia-sip/bnf.h>
-#include <sofia-sip/hostdomain.h>
+#include "sofia-sip/bnf.h"
+#include "sofia-sip/hostdomain.h"
 
 
 #include <stdio.h>

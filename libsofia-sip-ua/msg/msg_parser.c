@@ -46,10 +46,10 @@
 #include <errno.h>
 
 #include <stdarg.h>
-#include <sofia-sip/su_tagarg.h>
+#include "sofia-sip/su_tagarg.h"
 
-#include <sofia-sip/su.h>
-#include <sofia-sip/su_alloc.h>
+#include "sofia-sip/su.h"
+#include "sofia-sip/su_alloc.h"
 
 #include "msg_internal.h"
 #include "sofia-sip/msg_header.h"
@@ -58,6 +58,8 @@
 #include "sofia-sip/msg_mclass.h"
 #include "sofia-sip/msg_mclass_hash.h"
 #include "sofia-sip/msg_mime.h"
+// CHANGE 7 - EAB 20090402
+#include "sofia-sip/su_debug.h"
 
 #if HAVE_FUNC
 #elif HAVE_FUNCTION
@@ -78,10 +80,11 @@ static void msg_insert_here_in_chain(msg_t *msg,
 				     msg_header_t *h);
 su_inline msg_header_t *msg_chain_remove(msg_t *msg, msg_header_t *h);
 
-#ifndef NDEBUG
+// CHANGE 7 - EAB 20090402
+//#ifndef NDEBUG
 static int msg_chain_loop(msg_header_t const *h);
 static int msg_chain_errors(msg_header_t const *h);
-#endif
+//#endif
 
 /* ====================================================================== */
 /* Message properties */
@@ -327,7 +330,7 @@ void *msg_buf_move(msg_t *dst, msg_t const *src)
  * @param[in]  msg     message object 
  * @param[out] vec     I/O vector 
  * @param[in]  veclen  available length of @a vec 
- * @param[in]  n       number of possibly available bytes 
+ * @param[in]  n       number of possibly available bytesï¿½
  * @param[in]  exact   true if data ends at message boundary 
  *
  * @return
@@ -1086,6 +1089,7 @@ extract_header(msg_t *msg, msg_pub_t *mo, char *b, isize_t bsiz, int eos,
     b += len, len = 0;
     if (h->sh_succ)
       assert(&h->sh_succ == h->sh_succ->sh_prev);
+
     h = h->sh_next;
   }
 
@@ -1548,6 +1552,14 @@ int msg_prepare(msg_t *msg)
   assert(msg->m_chain);
   assert(msg_chain_errors(msg->m_chain) == 0);
 
+  // CHANGE 7 - EAB 20090402
+  if ( !(msg->m_chain) || !(msg_chain_errors(msg->m_chain) == 0) )
+  {
+    SU_DEBUG_3 ( ("[%s::%s]: assert @ line %dwould have fired\n", __FILE__, __func__, __LINE__ ) );
+    return -1;
+  }
+
+
   /* Get rid of data that was received but not yet used (parsed) */
   msg_clear_committed(msg);
 
@@ -1985,6 +1997,13 @@ int msg_serialize(msg_t *msg, msg_pub_t *pub)
 
   assert(msg->m_chain && msg_chain_errors(msg->m_chain) == 0);
 
+// CHANGE 7 - EAB 20090402
+#ifdef NDEBUG
+  if (!(msg->m_chain && msg_chain_errors(msg->m_chain) == 0))
+  {
+      SU_DEBUG_3 ( ("[%s::%s]: assert @ line %dwould have fired\n", __FILE__, __func__, __LINE__ ) );
+  }
+#endif
   return 0;
 }
 
@@ -2200,6 +2219,14 @@ void msg_insert_here_in_chain(msg_t *msg,
       msg->m_tail = &last->sh_succ;
 
     assert(msg->m_chain && msg_chain_errors(msg->m_chain) == 0);
+    
+// CHANGE 7 - EAB 20090402
+#ifdef NDEBUG
+    if ( !(msg->m_chain && msg_chain_errors(msg->m_chain) == 0 ) )
+    {
+        SU_DEBUG_3 ( ("[%s::%s]: assert @ line %dwould have fired\n", __FILE__, __func__, __LINE__ ) );
+    }
+#endif    
   }
 }
 
@@ -2234,11 +2261,20 @@ msg_header_t *msg_chain_remove(msg_t *msg, msg_header_t *h)
 
     if (msg)
       assert(msg_chain_errors(msg->m_chain) == 0);
+
+// CHANGE 7 - EAB 20090402
+#ifdef NDEBUG
+    if ( msg && (msg_chain_errors(msg->m_chain) != 0) )
+    {
+        SU_DEBUG_3 ( ("[%s::%s]: assert @ line %dwould have fired\n", __FILE__, __func__, __LINE__ ) );
+    }
+#endif    
   }
   return h;
 }
 
-#ifndef NDEBUG
+// CHANGE 7 - EAB 20090402
+//#ifndef NDEBUG
 /**Check if header chain contains any loops.
  *
  * @return
@@ -2284,7 +2320,8 @@ int msg_chain_errors(msg_header_t const *h)
 
   return 0;
 }
-#endif
+// CHANGE 7 - EAB 20090402
+//#endif
 
 /* ====================================================================== */
 /* Handling message structure - allocating, adding and removing headers */
@@ -2841,6 +2878,15 @@ int msg_header_insert(msg_t *msg, msg_pub_t *pub, msg_header_t *h)
   msg_header_t **hh;
 
   assert(msg);
+
+// CHANGE 7 - EAB 20090402
+#ifdef NDEBUG
+  if ( !msg )
+  {
+      SU_DEBUG_3 ( ("[%s::%s]: assert @ line %dwould have fired\n", __FILE__, __func__, __LINE__ ) );
+      return -1;
+  }
+#endif  
 
   if (msg == NULL || h == NULL || h == MSG_HEADER_NONE || 
       h->sh_class == NULL)

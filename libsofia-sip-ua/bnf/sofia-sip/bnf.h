@@ -35,7 +35,7 @@
  *
  */
 
-#include <sofia-sip/su_types.h>
+#include "sofia-sip/su_types.h"
 
 #include <string.h>
 

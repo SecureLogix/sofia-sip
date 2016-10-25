@@ -37,10 +37,10 @@
  * 
  */
 
-#include <sofia-sip/su_config.h>
+#include "sofia-sip/su_config.h"
 
 #ifndef BNF_H
-#include <sofia-sip/bnf.h>
+#include "sofia-sip/bnf.h"
 #endif
 
 SOFIA_BEGIN_DECLS

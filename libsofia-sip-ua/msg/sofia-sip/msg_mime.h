@@ -38,14 +38,14 @@
  */
 
 #ifndef URL_H
-#include <sofia-sip/url.h>
+#include "sofia-sip/url.h"
 #endif
 
 #ifndef MSG_TYPES_H
-#include <sofia-sip/msg_types.h>
+#include "sofia-sip/msg_types.h"
 #endif
 #ifndef SU_TYPES_H
-#include <sofia-sip/su_types.h>
+#include "sofia-sip/su_types.h"
 #endif
 
 SOFIA_BEGIN_DECLS

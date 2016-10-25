@@ -38,9 +38,9 @@
 #define MSG_PUB_T       struct sip_s
 #define MSG_HDR_T       union sip_header_u
 
-#include <sofia-sip/su_tagarg.h>
+#include "sofia-sip/su_tagarg.h"
 #include "sofia-sip/sip_parser.h"
-#include <sofia-sip/msg_mclass.h>
+#include "sofia-sip/msg_mclass.h"
 
 #include <stddef.h>
 #include <stdlib.h>

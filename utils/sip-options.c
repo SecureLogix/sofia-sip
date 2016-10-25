@@ -108,13 +108,13 @@
 typedef struct context_s context_t;
 #define NTA_OUTGOING_MAGIC_T context_t
 
-#include <sofia-sip/nta.h>
-#include <sofia-sip/sip_header.h>
-#include <sofia-sip/sip_tag.h>
-#include <sofia-sip/sl_utils.h>
-#include <sofia-sip/sip_util.h>
-#include <sofia-sip/auth_client.h>
-#include <sofia-sip/tport_tag.h>
+#include "sofia-sip/nta.h"
+#include "sofia-sip/sip_header.h"
+#include "sofia-sip/sip_tag.h"
+#include "sofia-sip/sl_utils.h"
+#include "sofia-sip/sip_util.h"
+#include "sofia-sip/auth_client.h"
+#include "sofia-sip/tport_tag.h"
 
 struct context_s {
   su_home_t   	  c_home[1];

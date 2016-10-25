@@ -33,7 +33,7 @@
 
 #include "config.h"
 
-#include <sofia-sip/su_md5.h>
+#include "sofia-sip/su_md5.h"
 #include "sofia-sip/auth_common.h"
 #include "sofia-sip/auth_digest.h"
 #include "sofia-sip/msg_header.h"

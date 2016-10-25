@@ -36,11 +36,11 @@
 
 #include <stdio.h>
 
-#include <sofia-sip/su.h>
-#include <sofia-sip/su_alloc.h>
-#include <sofia-sip/su_wait.h>
+#include "sofia-sip/su.h"
+#include "sofia-sip/su_alloc.h"
+#include "sofia-sip/su_wait.h"
 #define STUN_MAGIC_T su_root_t
-#include <sofia-sip/stun.h>
+#include "sofia-sip/stun.h"
 
 static char* g_domain = NULL;
 

@@ -40,9 +40,9 @@
 #include "sofia-sip/sip_parser.h"
 #include "sofia-sip/msg_mclass.h"
 #include "sofia-sip/msg_mclass_hash.h"
-#include <sofia-sip/sip_header.h>
-#include <sofia-sip/sip_util.h>
-#include <sofia-sip/msg_addr.h>
+#include "sofia-sip/sip_header.h"
+#include "sofia-sip/sip_util.h"
+#include "sofia-sip/msg_addr.h"
 
 #include <stddef.h>
 #include <stdlib.h>

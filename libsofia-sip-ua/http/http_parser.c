@@ -37,14 +37,14 @@
 #define MSG_PUB_T struct http_s
 #define MSG_HDR_T union http_header_u
 
-#include <sofia-sip/su_alloc.h>
+#include "sofia-sip/su_alloc.h"
 #include "sofia-sip/http_parser.h"
-#include <sofia-sip/msg_parser.h>
-#include <sofia-sip/http_header.h>
-#include <sofia-sip/http_status.h>
-#include <sofia-sip/msg_mclass.h>
+#include "sofia-sip/msg_parser.h"
+#include "sofia-sip/http_header.h"
+#include "sofia-sip/http_status.h"
+#include "sofia-sip/msg_mclass.h"
 
-#include <sofia-sip/su_tagarg.h>
+#include "sofia-sip/su_tagarg.h"
 
 #include <stddef.h>
 #include <stdlib.h>

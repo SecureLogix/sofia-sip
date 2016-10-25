@@ -39,9 +39,9 @@
 #define TAG_NAMESPACE "nea"
 
 #include "sofia-sip/nea.h"
-#include <sofia-sip/su_tag_class.h>
-#include <sofia-sip/sip_tag_class.h>
-#include <sofia-sip/url_tag_class.h>
+#include "sofia-sip/su_tag_class.h"
+#include "sofia-sip/sip_tag_class.h"
+#include "sofia-sip/url_tag_class.h"
 
 tag_typedef_t neatag_any = NSTAG_TYPEDEF(*);
 tag_typedef_t neatag_min_expires = UINTTAG_TYPEDEF(min_expires);

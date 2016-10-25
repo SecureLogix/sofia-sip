@@ -35,19 +35,19 @@
 #include <stddef.h>
 #include <string.h>
 
-#include <sofia-sip/su.h>
+#include "sofia-sip/su.h"
 
 /* Avoid casting http_t to msg_pub_t and http_header_t to msg_header_t  */
 #define MSG_PUB_T struct http_s
 #define MSG_HDR_T union http_header_u
 
-#include <sofia-sip/http_parser.h>
+#include "sofia-sip/http_parser.h"
 
-#include <sofia-sip/http_tag.h>
-#include <sofia-sip/su_tag_class.h>
-#include <sofia-sip/su_tag_inline.h>
-#include <sofia-sip/http_tag_class.h>
-#include <sofia-sip/su_tagarg.h>
+#include "sofia-sip/http_tag.h"
+#include "sofia-sip/su_tag_class.h"
+#include "sofia-sip/su_tag_inline.h"
+#include "sofia-sip/http_tag_class.h"
+#include "sofia-sip/su_tagarg.h"
 
 tag_class_t httphdrtag_class[1] = 
   {{

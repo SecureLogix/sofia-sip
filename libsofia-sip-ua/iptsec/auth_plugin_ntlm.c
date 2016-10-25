@@ -43,11 +43,11 @@
 #include <stdio.h>
 #include <assert.h>
 
-#include <sofia-sip/su_debug.h>
-#include <sofia-sip/su_wait.h>
+#include "sofia-sip/su_debug.h"
+#include "sofia-sip/su_wait.h"
 
-#include <sofia-sip/su_alloc.h>
-#include <sofia-sip/su_tagarg.h>
+#include "sofia-sip/su_alloc.h"
+#include "sofia-sip/su_tagarg.h"
 
 #include "sofia-sip/auth_module.h"
 #include "sofia-sip/auth_plugin.h"

@@ -217,7 +217,7 @@ typedef struct su_root_s su_root_t;
  * example,
  * @code
  * #define SU_ROOT_MAGIC_T struct context
-f * #include <sofia-sip/su_wait.h>
+f * #include "sofia-sip/su_wait.h"
  * @endcode
  */
 #define SU_ROOT_MAGIC_T void
@@ -230,7 +230,7 @@ f * #include <sofia-sip/su_wait.h>
  * example,
  * @code
  * #define SU_ROOT_MAGIC_T struct context
- * #include <sofia-sip/su_wait.h>
+ * #include "sofia-sip/su_wait.h"
  * @endcode
  */
 typedef SU_ROOT_MAGIC_T su_root_magic_t;
@@ -243,7 +243,7 @@ typedef SU_ROOT_MAGIC_T su_root_magic_t;
  * the SU_WAKEUP_ARG_T () before including <sofia-sip/su_wait.h>, for example,
  * @code
  * #define SU_WAKEUP_ARG_T struct transport
- * #include <sofia-sip/su_wait.h>
+ * #include "sofia-sip/su_wait.h"
  * @endcode
  */
 #define SU_WAKEUP_ARG_T void
@@ -255,7 +255,7 @@ typedef SU_ROOT_MAGIC_T su_root_magic_t;
  * the SU_WAKEUP_ARG_T () before including <sofia-sip/su_wait.h>, for example,
  * @code
  * #define SU_WAKEUP_ARG_T struct transport
- * #include <sofia-sip/su_wait.h>
+ * #include "sofia-sip/su_wait.h"
  * @endcode
  */
 typedef SU_WAKEUP_ARG_T su_wakeup_arg_t;
@@ -291,7 +291,7 @@ SOFIAPUBVAR int su_root_size_hint;
  * example,
  * @code
  * #define SU_PREPOLL_MAGIC_T struct context
- * #include <sofia-sip/su_wait.h>
+ * #include "sofia-sip/su_wait.h"
  * @endcode
  */
 #define SU_PREPOLL_MAGIC_T void
@@ -304,7 +304,7 @@ SOFIAPUBVAR int su_root_size_hint;
  * example,
  * @code
  * #define SU_PREPOLL_MAGIC_T struct context
- * #include <sofia-sip/su_wait.h>
+ * #include "sofia-sip/su_wait.h"
  * @endcode
  */
 typedef SU_PREPOLL_MAGIC_T su_prepoll_magic_t;

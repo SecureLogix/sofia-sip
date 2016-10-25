@@ -39,7 +39,7 @@ extern "C" {
 #endif
 
 #ifndef SU_TYPES_H
-#include <sofia-sip/su_types.h>
+#include "sofia-sip/su_types.h"
 #endif
 
 /** Byte. */

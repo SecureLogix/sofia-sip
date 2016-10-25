@@ -43,10 +43,10 @@
 #include <errno.h>
 
 #include <stdarg.h>
-#include <sofia-sip/su_tagarg.h>
+#include "sofia-sip/su_tagarg.h"
 
-#include <sofia-sip/su.h>
-#include <sofia-sip/su_alloc.h>
+#include "sofia-sip/su.h"
+#include "sofia-sip/su_alloc.h"
 
 #include "msg_internal.h"
 #include "sofia-sip/msg_parser.h"

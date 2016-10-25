@@ -36,10 +36,10 @@
  */
 
 #ifndef MSG_H
-#include <sofia-sip/msg.h>
+#include "sofia-sip/msg.h"
 #endif
 #ifndef SU_H
-#include <sofia-sip/su.h>
+#include "sofia-sip/su.h"
 #endif
 
 SOFIA_BEGIN_DECLS

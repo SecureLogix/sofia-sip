@@ -39,11 +39,11 @@
 
 #include <assert.h>
 
-#include <sofia-sip/string0.h>
+#include "sofia-sip/string0.h"
 
-#include <sofia-sip/sip_protos.h>
-#include <sofia-sip/sip_status.h>
-#include <sofia-sip/su_tagarg.h>
+#include "sofia-sip/sip_protos.h"
+#include "sofia-sip/sip_status.h"
+#include "sofia-sip/su_tagarg.h"
 
 #define NEA_SMAGIC_T         struct nua_handle_s
 #define NEA_EMAGIC_T         struct nua_handle_s

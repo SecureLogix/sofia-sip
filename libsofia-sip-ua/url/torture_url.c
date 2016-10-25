@@ -45,7 +45,7 @@ static int tstflags = 0;
 
 #define TSTFLAGS tstflags
 
-#include <sofia-sip/tstdef.h>
+#include "sofia-sip/tstdef.h"
 
 char const name[] = "torture_url";
 
@@ -959,7 +959,7 @@ int test_tags(void)
   END();
 }
 
-#include <sofia-sip/su_tag_class.h>
+#include "sofia-sip/su_tag_class.h"
 
 int test_tag_filter(void)
 {

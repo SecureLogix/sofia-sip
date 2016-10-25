@@ -39,18 +39,18 @@
 
 #include <assert.h>
 
-#include <sofia-sip/string0.h>
-#include <sofia-sip/sip_protos.h>
-#include <sofia-sip/sip_status.h>
-#include <sofia-sip/sip_util.h>
-#include <sofia-sip/su_uniqueid.h>
+#include "sofia-sip/string0.h"
+#include "sofia-sip/sip_protos.h"
+#include "sofia-sip/sip_status.h"
+#include "sofia-sip/sip_util.h"
+#include "sofia-sip/su_uniqueid.h"
 
 #define NTA_INCOMING_MAGIC_T struct nua_server_request
 #define NTA_OUTGOING_MAGIC_T struct nua_client_request
 #define NTA_RELIABLE_MAGIC_T struct nua_server_request
 
 #include "nua_stack.h"
-#include <sofia-sip/soa.h>
+#include "sofia-sip/soa.h"
 
 #ifndef SDP_H
 typedef struct sdp_session_s sdp_session_t;

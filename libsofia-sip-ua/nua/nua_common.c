@@ -39,37 +39,37 @@
 
 #include <assert.h>
 
-#include <sofia-sip/su_tag_class.h>
-#include <sofia-sip/su_tag_class.h>
-#include <sofia-sip/su_tagarg.h>
-#include <sofia-sip/su_uniqueid.h>
+#include "sofia-sip/su_tag_class.h"
+#include "sofia-sip/su_tag_class.h"
+#include "sofia-sip/su_tagarg.h"
+#include "sofia-sip/su_uniqueid.h"
 
 #include <stdio.h>
 
-#include <sofia-sip/su_tag_io.h>
+#include "sofia-sip/su_tag_io.h"
 
 #define SU_LOG (nua_log)
-#include <sofia-sip/su_debug.h>
+#include "sofia-sip/su_debug.h"
 
 #define SU_ROOT_MAGIC_T   struct nua_s
 
-#include <sofia-sip/su_wait.h>
+#include "sofia-sip/su_wait.h"
 
-#include <sofia-sip/su_strlst.h>
+#include "sofia-sip/su_strlst.h"
 
 #include "sofia-sip/nua.h"
 #include "sofia-sip/nua_tag.h"
 
-#include <sofia-sip/sip_protos.h>
-#include <sofia-sip/nta.h>
-#include <sofia-sip/nea.h>
+#include "sofia-sip/sip_protos.h"
+#include "sofia-sip/nta.h"
+#include "sofia-sip/nea.h"
 
-#include <sofia-sip/auth_client.h>
+#include "sofia-sip/auth_client.h"
 #if HAVE_SMIME 		/* Start NRC Boston */
 #include "smimec.h"
 #endif                  /* End NRC Boston */
 
-#include <sofia-sip/sdp.h>
+#include "sofia-sip/sdp.h"
 
 #include "nua_stack.h"
 

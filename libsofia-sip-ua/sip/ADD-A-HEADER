@@ -123,10 +123,10 @@ IF YOUR HEADERS ARE COMPLETELY NON-STANDARD
  */
 
 #ifndef SIP_H
-#include <sofia-sip/sip.h>
+#include "sofia-sip/sip.h"
 #endif
 #ifndef SIP_HEADER_H
-#include <sofia-sip/sip_header.h>
+#include "sofia-sip/sip_header.h"
 #endif
 
 /**@ingroup sip_example

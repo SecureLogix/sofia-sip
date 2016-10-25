@@ -38,21 +38,21 @@
 
 #include "outbound.h"
 
-#include <sofia-sip/hostdomain.h>
-#include <sofia-sip/sip.h>
-#include <sofia-sip/sip_protos.h>
-#include <sofia-sip/sip_util.h>
-#include <sofia-sip/sip_status.h>
-#include <sofia-sip/su_tagarg.h>
-#include <sofia-sip/tport.h>
-#include <sofia-sip/nta_tport.h>
+#include "sofia-sip/hostdomain.h"
+#include "sofia-sip/sip.h"
+#include "sofia-sip/sip_protos.h"
+#include "sofia-sip/sip_util.h"
+#include "sofia-sip/sip_status.h"
+#include "sofia-sip/su_tagarg.h"
+#include "sofia-sip/tport.h"
+#include "sofia-sip/nta_tport.h"
 
-#include <sofia-sip/su_md5.h>
-#include <sofia-sip/su_uniqueid.h>
-#include <sofia-sip/token64.h>
+#include "sofia-sip/su_md5.h"
+#include "sofia-sip/su_uniqueid.h"
+#include "sofia-sip/token64.h"
 
 #define SU_LOG (nua_log)
-#include <sofia-sip/su_debug.h>
+#include "sofia-sip/su_debug.h"
 
 #include <stddef.h>
 #include <stdlib.h>
@@ -246,7 +246,7 @@ void outbound_unref(outbound_t *ob)
   su_home_unref(ob->ob_home);
 }
 
-#include <sofia-sip/bnf.h>
+#include "sofia-sip/bnf.h"
 
 /** Set various outbound and nat-traversal related options. */
 int outbound_set_options(outbound_t *ob,

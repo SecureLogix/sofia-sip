@@ -36,8 +36,8 @@
 
 #include "sofia-sip/auth_module.h"
 
-#include <sofia-sip/su_tag_class.h>
-#include <sofia-sip/url_tag_class.h>
+#include "sofia-sip/su_tag_class.h"
+#include "sofia-sip/url_tag_class.h"
 
 /**@def AUTHTAG_ANY()
  * 

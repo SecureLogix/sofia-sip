@@ -35,20 +35,20 @@
 #define NUA_H
 
 #ifndef SU_WAIT_H
-#include <sofia-sip/su_wait.h>
+#include "sofia-sip/su_wait.h"
 #endif
 
 
 #ifndef URL_H
-#include <sofia-sip/url.h>
+#include "sofia-sip/url.h"
 #endif
 
 #ifndef SIP_H
-#include <sofia-sip/sip.h>
+#include "sofia-sip/sip.h"
 #endif
 
 #ifndef NUA_TAG_H
-#include <sofia-sip/nua_tag.h>
+#include "sofia-sip/nua_tag.h"
 #endif
 
 SOFIA_BEGIN_DECLS

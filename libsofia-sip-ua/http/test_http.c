@@ -37,25 +37,25 @@
 #define MSG_PUB_T struct http_s
 #define MSG_HDR_T union http_header_u
 
-#include <sofia-sip/su.h>
+#include "sofia-sip/su.h"
 
-#include <sofia-sip/su_types.h>
+#include "sofia-sip/su_types.h"
 
-#include <sofia-sip/su_tag.h>
-#include <sofia-sip/su_tag_class.h>
-#include <sofia-sip/su_tag_io.h>
+#include "sofia-sip/su_tag.h"
+#include "sofia-sip/su_tag_class.h"
+#include "sofia-sip/su_tag_io.h"
 
-#include <sofia-sip/http_parser.h>
+#include "sofia-sip/http_parser.h"
 
-#include <sofia-sip/http_tag.h>
-#include <sofia-sip/url_tag.h>
+#include "sofia-sip/http_tag.h"
+#include "sofia-sip/url_tag.h"
 
-#include <sofia-sip/http_header.h>
-#include <sofia-sip/msg_addr.h>
+#include "sofia-sip/http_header.h"
+#include "sofia-sip/msg_addr.h"
 
 #define TSTFLAGS tstflags
 
-#include <sofia-sip/tstdef.h>
+#include "sofia-sip/tstdef.h"
 
 #include <stdio.h>
 #include <string.h>

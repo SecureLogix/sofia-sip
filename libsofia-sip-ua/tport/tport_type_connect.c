@@ -34,7 +34,7 @@
 
 #include "config.h"
 
-#include "tport_internal.h"
+#include "sofia-sip/tport_internal.h"
 
 #include <stdlib.h>
 #include <time.h>
@@ -45,8 +45,8 @@
 /* ---------------------------------------------------------------------- */
 /* TCP using HTTP CONNECT */
 
-#include <sofia-sip/http.h>
-#include <sofia-sip/http_header.h>
+#include "sofia-sip/http.h"
+#include "sofia-sip/http_header.h"
 
 static int tport_http_connect_init_primary(tport_primary_t *,
 					   tp_name_t tpn[1], 
@@ -206,7 +206,7 @@ static tport_t *tport_http_connect(tport_primary_t *pri, su_addrinfo_t *ai,
   return tport;
 }
 
-#include <sofia-sip/msg_buffer.h>
+#include "sofia-sip/msg_buffer.h"
 
 static void tport_http_deliver(tport_t *self, msg_t *msg, su_time_t now)
 {

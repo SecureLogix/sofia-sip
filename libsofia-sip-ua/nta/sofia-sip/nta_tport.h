@@ -37,7 +37,7 @@
  */
 
 #ifndef NTA_H
-#include <sofia-sip/nta.h>
+#include "sofia-sip/nta.h"
 #endif
 
 SOFIA_BEGIN_DECLS

@@ -70,7 +70,7 @@ typedef struct tport_nat_s tport_nat_t;
 #include "sofia-sip/su_uniqueid.h"
 #include <sofia-sip/rbtree.h>
 
-#include "tport_internal.h"
+#include "sofia-sip/tport_internal.h"
 
 #if HAVE_FUNC
 #elif HAVE_FUNCTION

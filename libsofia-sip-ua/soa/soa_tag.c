@@ -31,7 +31,7 @@
 
 #include "config.h"
 
-#include <sofia-sip/su.h>
+#include "sofia-sip/su.h"
 
 #if 1
 #define TAG_NAMESPACE soa_tag_namespace
@@ -40,11 +40,11 @@
 #define TAG_NAMESPACE "soa"
 #endif
 
-#include <sofia-sip/soa.h>
-#include <sofia-sip/soa_tag.h>
+#include "sofia-sip/soa.h"
+#include "sofia-sip/soa_tag.h"
 
-#include <sofia-sip/su_tag_class.h>
-#include <sofia-sip/sdp_tag.h>
+#include "sofia-sip/su_tag_class.h"
+#include "sofia-sip/sdp_tag.h"
 
 #include <string.h>
 

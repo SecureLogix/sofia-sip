@@ -44,29 +44,29 @@
 #define MSG_PUB_T       struct sip_s
 #define MSG_HDR_T       union sip_header_u
 
-#include <sofia-sip/su_types.h>
+#include "sofia-sip/su_types.h"
 
-#include <sofia-sip/su_tag.h>
-#include <sofia-sip/su_tag_class.h>
-#include <sofia-sip/su_tag_io.h>
+#include "sofia-sip/su_tag.h"
+#include "sofia-sip/su_tag_class.h"
+#include "sofia-sip/su_tag_io.h"
 
 #include "sofia-sip/sip_parser.h"
-#include <sofia-sip/sip_util.h>
-#include <sofia-sip/sip_status.h>
+#include "sofia-sip/sip_util.h"
+#include "sofia-sip/sip_status.h"
 
-#include <sofia-sip/sip_tag.h>
-#include <sofia-sip/url_tag.h>
-#include <sofia-sip/msg_addr.h>
-#include <sofia-sip/msg_mclass.h>
-#include <sofia-sip/msg_mclass_hash.h>
+#include "sofia-sip/sip_tag.h"
+#include "sofia-sip/url_tag.h"
+#include "sofia-sip/msg_addr.h"
+#include "sofia-sip/msg_mclass.h"
+#include "sofia-sip/msg_mclass_hash.h"
 
-#include <sofia-sip/sip_extra.h>
+#include "sofia-sip/sip_extra.h"
 
 int tstflags;
 
 #define TSTFLAGS tstflags
 
-#include <sofia-sip/tstdef.h>
+#include "sofia-sip/tstdef.h"
 
 char const *name = "torture_sip.c";
 

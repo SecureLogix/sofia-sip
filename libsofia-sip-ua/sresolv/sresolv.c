@@ -38,10 +38,10 @@
 #define SU_WAKEUP_ARG_T struct sres_sofia_register_s
 #define SRES_ASYNC_T    struct sres_sofia_s
 
-#include <sofia-sip/sresolv.h>
+#include "sofia-sip/sresolv.h"
 
 #define SU_LOG sresolv_log
-#include <sofia-sip/su_debug.h>
+#include "sofia-sip/su_debug.h"
 
 #include <string.h>
 #include <assert.h>
@@ -51,8 +51,8 @@
 
 #define TAG_NAMESPACE "sres"
 
-#include <sofia-sip/su_tag_class.h>
-#include <sofia-sip/su_tagarg.h>
+#include "sofia-sip/su_tag_class.h"
+#include "sofia-sip/su_tagarg.h"
 
 tag_typedef_t srestag_any = NSTAG_TYPEDEF(*);
 tag_typedef_t srestag_resolv_conf = STRTAG_TYPEDEF(resolv_conf);

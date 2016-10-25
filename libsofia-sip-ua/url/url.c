@@ -33,12 +33,12 @@
 
 #include "config.h"
 
-#include <sofia-sip/su_alloc.h>
-#include <sofia-sip/bnf.h>
-#include <sofia-sip/hostdomain.h>
-#include <sofia-sip/url.h>
+#include "sofia-sip/su_alloc.h"
+#include "sofia-sip/bnf.h"
+#include "sofia-sip/hostdomain.h"
+#include "sofia-sip/url.h"
 
-#include <sofia-sip/string0.h>
+#include "sofia-sip/string0.h"
 
 #include <stdio.h>
 #include <string.h>
@@ -185,7 +185,7 @@ int url_reserved_p(char const *s)
  * The number of characters in corresponding but escaped string.
  *
  * You can handle a part of URL with reserved characters like this:
- * @code
+ *ï¿½@code
  * if (url_reserved_p(s))  {
  *   n = malloc(url_esclen(s, NULL) + 1);
  *   if (n) url_escape(n, s);
@@ -1083,7 +1083,7 @@ char *copy(char *buf, char *end, char const *src)
  * @param buf     Buffer for non-constant strings copied from @a src.
  * @param bufsize Size of @a buf.
  * @param dst     Destination URL structure.
- * @param src     Source URL structure.
+ *ï¿½@param src     Source URL structure.
  *
  * @return Number of characters required for
  * duplicating the strings in @a str, or -1 if an error
@@ -1167,7 +1167,7 @@ issize_t url_dup(char *buf, isize_t bufsize, url_t *dst, url_t const *src)
  * @param buf     Buffer for non-constant strings copied from @a src.
  * @param end     End of @a buf.
  * @param dst     Destination URL structure.
- * @param src     Source URL structure.
+ *ï¿½@param src     Source URL structure.
  *
  * @return 
  * The macro URL_DUP() returns pointer to first unused byte in the 
@@ -1895,7 +1895,7 @@ int url_sanitize(url_t *url)
   return 0;
 }
 
-#include <sofia-sip/su_md5.h>
+#include "sofia-sip/su_md5.h"
 
 static
 void canon_update(su_md5_t *md5, char const *s, size_t n, char const *allow)

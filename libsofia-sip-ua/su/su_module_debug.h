@@ -39,14 +39,14 @@
  * 
  */
 
-#include <sofia-sip/su_log.h>
+#include "sofia-sip/su_log.h"
 
 SOFIA_BEGIN_DECLS
 
 /** Debugging log for @b su module. */
 SOFIAPUBVAR su_log_t su_log_global[];
 #define SU_LOG (su_log_global)
-#include <sofia-sip/su_debug.h>
+#include "sofia-sip/su_debug.h"
 
 SOFIA_END_DECLS
 

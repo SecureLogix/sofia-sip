@@ -43,15 +43,15 @@
 #define TP_MAGIC_T        sip_via_t 
 #define TP_CLIENT_T       nta_outgoing_t
 
-#include <sofia-sip/nta.h>
-#include <sofia-sip/nta_tport.h>
-#include <sofia-sip/tport.h>
+#include "sofia-sip/nta.h"
+#include "sofia-sip/nta_tport.h"
+#include "sofia-sip/tport.h"
 
 #if HAVE_SOFIA_SRESOLV
-#include <sofia-sip/sresolv.h>
+#include "sofia-sip/sresolv.h"
 #endif
 
-#include <sofia-sip/htable.h>
+#include "sofia-sip/htable.h"
 
 #if HAVE_SMIME
 #include "smimec.h"
@@ -605,7 +605,7 @@ SOFIAPUBFUN void nta_agent_deinit_sigcomp(nta_agent_t *sa);
 #ifdef SU_DEBUG_H
 #error <su_debug.h> included directly.
 #endif
-#include <sofia-sip/su_debug.h>
+#include "sofia-sip/su_debug.h"
 SOFIAPUBVAR su_log_t nta_log[];
 
 SOFIA_END_DECLS

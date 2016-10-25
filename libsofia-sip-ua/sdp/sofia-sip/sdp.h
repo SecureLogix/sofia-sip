@@ -33,10 +33,10 @@
  */
 
 #ifndef SU_ALLOC_H
-#include <sofia-sip/su_alloc.h>
+#include "sofia-sip/su_alloc.h"
 #endif
 #ifndef SU_TYPES_H
-#include <sofia-sip/su_types.h>
+#include "sofia-sip/su_types.h"
 #endif
 
 SOFIA_BEGIN_DECLS
@@ -242,6 +242,8 @@ typedef enum
   sdp_proto_rtp = 256,			/**< RTP/AVP */
   sdp_proto_srtp = 257,			/**< RTP/SAVP  */
   sdp_proto_udptl = 258,		/**< UDPTL. @NEW_1_12_4. */
+  // CHANGE 8 - dav 20090519 
+  sdp_proto_rtpf = 259,                 /**<RTP/AVPF */
   sdp_proto_tls = 511,			/**< TLS over TCP */
   sdp_proto_any = 512		        /**< * wildcard */
 } sdp_proto_e;

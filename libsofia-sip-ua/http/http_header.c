@@ -42,7 +42,7 @@
 
 #include <assert.h>
 
-#include <sofia-sip/su_alloc.h>
+#include "sofia-sip/su_alloc.h"
 
 /* Avoid casting http_t to msg_pub_t and http_header_t to msg_header_t  */
 #define MSG_PUB_T struct http_s
@@ -51,8 +51,8 @@
 
 #include "sofia-sip/http_parser.h"
 
-#include <sofia-sip/http_header.h>
-#include <sofia-sip/http_status.h>
+#include "sofia-sip/http_header.h"
+#include "sofia-sip/http_status.h"
 
 #ifndef UINT32_MAX
 #define UINT32_MAX (0xffffffffU)

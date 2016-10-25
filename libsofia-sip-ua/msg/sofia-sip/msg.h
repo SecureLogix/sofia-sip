@@ -34,8 +34,8 @@
  * @date Created: Fri Feb 18 08:54:48 2000 ppessi
  */
 
-#include <sofia-sip/msg_types.h>
-#include <sofia-sip/su_alloc.h>
+#include "sofia-sip/msg_types.h"
+#include "sofia-sip/su_alloc.h"
 
 SOFIA_BEGIN_DECLS
 

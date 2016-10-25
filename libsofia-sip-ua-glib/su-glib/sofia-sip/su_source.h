@@ -40,7 +40,7 @@
  */
 
 #ifndef SU_WAIT_H
-#include <sofia-sip/su_wait.h>
+#include "sofia-sip/su_wait.h"
 #endif
 #ifndef __GLIB_H__
 #include <glib.h>

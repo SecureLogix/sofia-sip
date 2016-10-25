@@ -57,16 +57,16 @@ struct soa_static_complete;
 
 #define SU_MSG_ARG_T struct soa_static_completed
 
-#include <sofia-sip/su_wait.h>
-#include <sofia-sip/su_tag_class.h>
-#include <sofia-sip/su_tag_class.h>
-#include <sofia-sip/su_tagarg.h>
-#include <sofia-sip/su_strlst.h>
-#include <sofia-sip/string0.h>
-#include <sofia-sip/bnf.h>
+#include "sofia-sip/su_wait.h"
+#include "sofia-sip/su_tag_class.h"
+#include "sofia-sip/su_tag_class.h"
+#include "sofia-sip/su_tagarg.h"
+#include "sofia-sip/su_strlst.h"
+#include "sofia-sip/string0.h"
+#include "sofia-sip/bnf.h"
 
 #include "sofia-sip/soa.h"
-#include <sofia-sip/sdp.h>
+#include "sofia-sip/sdp.h"
 #include "sofia-sip/soa_session.h"
 
 #define NONE ((void *)-1)

@@ -36,7 +36,7 @@
  */
 
 #ifndef SU_H
-#include <sofia-sip/su.h>
+#include "sofia-sip/su.h"
 #endif
 
 SOFIA_BEGIN_DECLS

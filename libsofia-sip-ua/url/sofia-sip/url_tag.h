@@ -34,12 +34,12 @@
  */
 
 #ifndef SU_TAG_H
-#include <sofia-sip/su_tag.h>
+#include "sofia-sip/su_tag.h"
 #endif
 
 #ifndef URL_H
 #define URL_H
-#include <sofia-sip/url.h>		/* Include only types */
+#include "sofia-sip/url.h"		/* Include only types */
 #undef URL_H
 #endif
 

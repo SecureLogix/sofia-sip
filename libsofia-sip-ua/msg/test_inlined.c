@@ -30,7 +30,7 @@
 
 #include "config.h"
 
-#include <sofia-sip/su_config.h>
+#include "sofia-sip/su_config.h"
 
 #if SU_HAVE_INLINE
 extern int xyzzy;

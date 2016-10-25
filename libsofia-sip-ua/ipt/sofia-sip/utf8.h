@@ -43,7 +43,7 @@
 #define	UTF8_H
 
 #ifndef SU_TYPES_H
-#include <sofia-sip/su_types.h>
+#include "sofia-sip/su_types.h"
 #endif
 
 SOFIA_BEGIN_DECLS

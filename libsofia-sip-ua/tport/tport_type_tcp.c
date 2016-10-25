@@ -34,7 +34,7 @@
 
 #include "config.h"
 
-#include "tport_internal.h"
+#include "sofia-sip/tport_internal.h"
 
 #if HAVE_NETINET_TCP_H
 #include <netinet/tcp.h>

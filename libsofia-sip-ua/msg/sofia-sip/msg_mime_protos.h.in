@@ -43,16 +43,16 @@
  */
 
 #ifndef MSG_PARSER_H
-#include <sofia-sip/msg_parser.h>
+#include "sofia-sip/msg_parser.h"
 #endif
 #ifndef MSG_MIME_H
-#include <sofia-sip/msg_mime.h>
+#include "sofia-sip/msg_mime.h"
 #endif
 #ifndef MSG_MCLASS_H
-#include <sofia-sip/msg_mclass.h>
+#include "sofia-sip/msg_mclass.h"
 #endif
 #ifndef MSG_MCLASS_H
-#include <sofia-sip/msg_mclass.h>
+#include "sofia-sip/msg_mclass.h"
 #endif
 
 SOFIA_BEGIN_DECLS

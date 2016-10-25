@@ -41,13 +41,13 @@
  * @author Pekka Pessi <Pekka.Pessi@nokia.com>
  */
 
-#include <sofia-sip/su_config.h>
+#include "sofia-sip/su_config.h"
 
 #ifndef HTTP_HEADER_H
-#include <sofia-sip/http_header.h>
+#include "sofia-sip/http_header.h"
 #endif
 #ifndef HTTP_HCLASSES_H
-#include <sofia-sip/http_hclasses.h>
+#include "sofia-sip/http_hclasses.h"
 #endif
 
 #define http_header_make(h, c, s) \

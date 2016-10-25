@@ -43,7 +43,7 @@
 #endif
 
 #ifndef MSG_HEADER_H
-#include <sofia-sip/msg_header.h>
+#include "sofia-sip/msg_header.h"
 #endif
 
 SOFIA_BEGIN_DECLS

@@ -42,7 +42,7 @@
 #include <s32strm.h>
 #include <commdbconnpref.h>
 
-#include <sofia-sip/su.h>
+#include "sofia-sip/su.h"
 
 
 su_sockaddr_t sa_global[1];

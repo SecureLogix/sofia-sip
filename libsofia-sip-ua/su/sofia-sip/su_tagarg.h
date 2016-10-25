@@ -35,7 +35,7 @@
  */
 
 #ifndef SU_TAG_H
-#include <sofia-sip/su_tag.h>
+#include "sofia-sip/su_tag.h"
 #endif
 
 SOFIA_BEGIN_DECLS

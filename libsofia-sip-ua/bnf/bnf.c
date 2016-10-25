@@ -696,7 +696,7 @@ issize_t scan_host(char **inout_host)
   return scan_domain(inout_host);
 }
 
-#include <sofia-sip/hostdomain.h>
+#include "sofia-sip/hostdomain.h"
 
 /** Return true if @a string is valid IP4 address in dot-notation.
  *
@@ -823,7 +823,7 @@ int host_has_domain_invalid(char const *string)
   return 0;
 }
 
-#include <sofia-sip/su.h>
+#include "sofia-sip/su.h"
 
 static size_t convert_ip_address(char const *s,
 				 uint8_t addr[16],

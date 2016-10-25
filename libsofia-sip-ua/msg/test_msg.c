@@ -55,7 +55,7 @@
 static int test_flags = 0;
 #define TSTFLAGS test_flags
 
-#include <sofia-sip/tstdef.h>
+#include "sofia-sip/tstdef.h"
 
 char const name[] = "test_msg";
 

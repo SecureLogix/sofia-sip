@@ -51,7 +51,7 @@
  */
 
 #ifndef SU_LOG_H
-#include <sofia-sip/su_log.h>
+#include "sofia-sip/su_log.h"
 #endif
 
 SOFIA_BEGIN_DECLS

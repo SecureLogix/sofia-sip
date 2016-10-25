@@ -31,7 +31,7 @@
 
 #include "config.h"
 
-#include <sofia-sip/heap.h>
+#include "sofia-sip/heap.h"
 
 #include <unistd.h>
 #include <stddef.h>
@@ -99,7 +99,7 @@ int tstflags;
 
 #define TSTFLAGS tstflags
 
-#include <sofia-sip/tstdef.h>
+#include "sofia-sip/tstdef.h"
 
 char name[] = "torture_heap";
 

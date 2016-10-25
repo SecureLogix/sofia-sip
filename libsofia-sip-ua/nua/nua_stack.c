@@ -36,13 +36,13 @@
 
 #include "config.h"
 
-#include <sofia-sip/su_tag_class.h>
-#include <sofia-sip/su_tag_inline.h>
-#include <sofia-sip/su_tagarg.h>
-#include <sofia-sip/su_strlst.h>
-#include <sofia-sip/su_uniqueid.h>
+#include "sofia-sip/su_tag_class.h"
+#include "sofia-sip/su_tag_inline.h"
+#include "sofia-sip/su_tagarg.h"
+#include "sofia-sip/su_strlst.h"
+#include "sofia-sip/su_uniqueid.h"
 
-#include <sofia-sip/su_tag_io.h>
+#include "sofia-sip/su_tag_io.h"
 
 #define SU_ROOT_MAGIC_T   struct nua_s
 #define SU_MSG_ARG_T      struct nua_ee_data
@@ -55,17 +55,17 @@
 #define NTA_LEG_MAGIC_T      struct nua_handle_s
 #define NTA_OUTGOING_MAGIC_T struct nua_client_request
 
-#include <sofia-sip/sip.h>
-#include <sofia-sip/sip_header.h>
-#include <sofia-sip/sip_status.h>
-#include <sofia-sip/sip_util.h>
+#include "sofia-sip/sip.h"
+#include "sofia-sip/sip_header.h"
+#include "sofia-sip/sip_status.h"
+#include "sofia-sip/sip_util.h"
 
-#include <sofia-sip/tport_tag.h>
-#include <sofia-sip/nta.h>
-#include <sofia-sip/nta_tport.h>
-#include <sofia-sip/auth_client.h>
+#include "sofia-sip/tport_tag.h"
+#include "sofia-sip/nta.h"
+#include "sofia-sip/nta_tport.h"
+#include "sofia-sip/auth_client.h"
 
-#include <sofia-sip/soa.h>
+#include "sofia-sip/soa.h"
 
 #include "sofia-sip/nua.h"
 #include "sofia-sip/nua_tag.h"

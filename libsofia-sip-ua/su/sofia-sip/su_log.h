@@ -47,7 +47,7 @@ typedef struct su_log_s su_log_t;
 #include <stdarg.h>
 
 #ifndef SU_CONFIG_H
-#include <sofia-sip/su_config.h>
+#include "sofia-sip/su_config.h"
 #endif
 
 SOFIA_BEGIN_DECLS

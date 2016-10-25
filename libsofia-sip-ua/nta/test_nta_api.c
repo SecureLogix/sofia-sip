@@ -37,7 +37,7 @@
 typedef struct agent_t agent_t;
 #define SU_ROOT_MAGIC_T      agent_t
 
-#include <sofia-sip/su_wait.h>
+#include "sofia-sip/su_wait.h"
 
 #include <msg_internal.h>
 
@@ -49,16 +49,16 @@ typedef struct agent_t agent_t;
 
 #include "sofia-sip/nta.h"
 #include "nta_internal.h"
-#include <sofia-sip/sip_header.h>
-#include <sofia-sip/sip_tag.h>
-#include <sofia-sip/sip_status.h>
-#include <sofia-sip/tport.h>
-#include <sofia-sip/htable.h>
-#include <sofia-sip/sresolv.h>
-#include <sofia-sip/su_log.h>
-#include <sofia-sip/msg_mclass.h>
-#include <sofia-sip/sofia_features.h>
-#include <sofia-sip/hostdomain.h>
+#include "sofia-sip/sip_header.h"
+#include "sofia-sip/sip_tag.h"
+#include "sofia-sip/sip_status.h"
+#include "sofia-sip/tport.h"
+#include "sofia-sip/htable.h"
+#include "sofia-sip/sresolv.h"
+#include "sofia-sip/su_log.h"
+#include "sofia-sip/msg_mclass.h"
+#include "sofia-sip/sofia_features.h"
+#include "sofia-sip/hostdomain.h"
 
 #include <stddef.h>
 #include <stdlib.h>
@@ -76,7 +76,7 @@ int tstflags = 0;
 #define TSTFLAGS tstflags
 char const name[] = "test_nta_api";
 
-#include <sofia-sip/tstdef.h>
+#include "sofia-sip/tstdef.h"
 
 #if HAVE_FUNC
 #elif HAVE_FUNCTION

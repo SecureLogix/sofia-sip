@@ -41,11 +41,11 @@
 #define TAG_NAMESPACE "nta"
 
 #include "sofia-sip/nta_tag.h"
-#include <sofia-sip/su_tag_class.h>
-#include <sofia-sip/sip_tag_class.h>
-#include <sofia-sip/url_tag_class.h>
+#include "sofia-sip/su_tag_class.h"
+#include "sofia-sip/sip_tag_class.h"
+#include "sofia-sip/url_tag_class.h"
 
-#include <sofia-sip/sip_protos.h>
+#include "sofia-sip/sip_protos.h"
 
 tag_typedef_t ntatag_any = NSTAG_TYPEDEF(*);
 

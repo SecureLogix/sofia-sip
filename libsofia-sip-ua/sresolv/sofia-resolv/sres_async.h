@@ -38,8 +38,8 @@
  * #include <sys/types.h>
  * #include <sys/socket.h>
  * #include <netinet/in.h>
- * #include <sofia-resolv/sres.h>
- * #include <sofia-resolv/sres_async.h>
+ * #include "sofia-resolv/sres.h"
+ * #include "sofia-resolv/sres_async.h"
  * @endcode
  *
  */

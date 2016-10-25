@@ -74,7 +74,7 @@ SOFIA_BEGIN_DECLS
  * example,
  * @code
  * #define SU_NETWORK_CHANGED_MAGIC_T struct context
- * #include <sofia-sip/su_os_nw.h>
+ * #include "sofia-sip/su_os_nw.h"
  * @endcode
  *
  * @since New in @VERSION_1_12_2.
@@ -89,7 +89,7 @@ SOFIA_BEGIN_DECLS
  * example,
  * @code
  * #define SU_NETWORK_CHANGED_MAGIC_T struct context
- * #include <sofia-sip/su_os_nw.h>
+ * #include "sofia-sip/su_os_nw.h"
  * @endcode
  *
  * @since New in @VERSION_1_12_2.

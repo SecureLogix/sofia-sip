@@ -36,16 +36,16 @@
  */
 
 #ifndef SU_TAG_H
-#include <sofia-sip/su_tag.h>
+#include "sofia-sip/su_tag.h"
 #endif
 #ifndef URL_TAG_H
-#include <sofia-sip/url_tag.h>
+#include "sofia-sip/url_tag.h"
 #endif
 #ifndef SIP_TAG_H
-#include <sofia-sip/sip_tag.h>
+#include "sofia-sip/sip_tag.h"
 #endif
 #ifndef NTA_TAG_H
-#include <sofia-sip/nta_tag.h>
+#include "sofia-sip/nta_tag.h"
 #endif
 
 SOFIA_BEGIN_DECLS

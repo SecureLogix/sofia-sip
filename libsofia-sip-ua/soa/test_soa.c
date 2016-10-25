@@ -50,10 +50,10 @@ struct context;
 #include "sofia-sip/soa_tag.h"
 #include "sofia-sip/soa_add.h"
 
-#include <sofia-sip/sdp.h>
+#include "sofia-sip/sdp.h"
 
-#include <sofia-sip/su_log.h>
-#include <sofia-sip/sip_tag.h>
+#include "sofia-sip/su_log.h"
+#include "sofia-sip/sip_tag.h"
 
 extern su_log_t soa_log[];
 
@@ -61,7 +61,7 @@ char const name[] = "test_soa";
 int tstflags = 0;
 #define TSTFLAGS tstflags
 
-#include <sofia-sip/tstdef.h>
+#include "sofia-sip/tstdef.h"
 
 #if HAVE_FUNC
 #elif HAVE_FUNCTION

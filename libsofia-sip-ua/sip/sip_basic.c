@@ -40,16 +40,16 @@
 #define MSG_PUB_T       struct sip_s
 #define MSG_HDR_T       union sip_header_u
 
-#include <sofia-sip/su_alloc.h>
-#include <sofia-sip/string0.h>
+#include "sofia-sip/su_alloc.h"
+#include "sofia-sip/string0.h"
 
 #include "sofia-sip/sip_parser.h"
-#include <sofia-sip/sip_util.h>
-#include <sofia-sip/sip_status.h>
+#include "sofia-sip/sip_util.h"
+#include "sofia-sip/sip_status.h"
 
-#include <sofia-sip/msg_date.h>
+#include "sofia-sip/msg_date.h"
 
-#include <sofia-sip/su_uniqueid.h>
+#include "sofia-sip/su_uniqueid.h"
 
 #include <stddef.h>
 #include <stdlib.h>
@@ -1255,7 +1255,7 @@ char *sip_cseq_dup_one(sip_header_t *dst, sip_header_t const *src,
 
 /**@ingroup sip_cseq 
  *
- * Create a @CSeq header object. 
+ *ï¿½Create a @CSeq header object. 
  *
  * Create a @CSeq header object with the
  * sequence number @a seq, method enum @a method and method name @a
@@ -1549,7 +1549,7 @@ issize_t sip_content_length_e(char b[], isize_t bsiz, sip_header_t const *h, int
 
 /**@ingroup sip_content_length 
  *
- * Create a @ContentLength header object. 
+ *ï¿½Create a @ContentLength header object. 
  *
  * Create a @ContentLength
  * header object with the value @a n.  The memory for the header is

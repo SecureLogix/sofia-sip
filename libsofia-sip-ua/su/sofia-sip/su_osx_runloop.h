@@ -38,7 +38,7 @@
  */
 
 #ifndef SU_WAIT_H
-#include <sofia-sip/su_wait.h>
+#include "sofia-sip/su_wait.h"
 #endif
 
 #include <CoreFoundation/CoreFoundation.h>

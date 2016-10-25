@@ -31,10 +31,10 @@
 
 #include "config.h"
 
-#include "tport_internal.h"
+#include "sofia-sip/tport_internal.h"
 
 #include <string.h>
-#include <sofia-sip/string0.h>
+#include "sofia-sip/string0.h"
 
 tport_comp_vtable_t const *tport_comp_vtable = NULL;
 

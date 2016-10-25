@@ -51,12 +51,12 @@
 
 #include <assert.h>
 
-#include <sofia-sip/su_config.h>
+#include "sofia-sip/su_config.h"
 
-#include <sofia-sip/su_tag.h>
-#include <sofia-sip/su_tag_class.h>
-#include <sofia-sip/su_tag_inline.h>
-#include <sofia-sip/su_tagarg.h>
+#include "sofia-sip/su_tag.h"
+#include "sofia-sip/su_tag_class.h"
+#include "sofia-sip/su_tag_inline.h"
+#include "sofia-sip/su_tagarg.h"
 
 #ifndef HAVE_STRTOULL
 unsigned longlong strtoull(const char *, char **, int);
@@ -1476,7 +1476,7 @@ tag_class_t ptr_tag_class[1] =
 /* ====================================================================== */
 /* socket tag - pass socket */
 
-#include <sofia-sip/su.h>
+#include "sofia-sip/su.h"
 
 int t_socket_snprintf(tagi_t const *t, char b[], size_t size)
 {

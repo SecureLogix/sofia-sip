@@ -35,13 +35,13 @@
  *
  */
 
-#include <sofia-sip/su.h>
-#include <sofia-sip/su_wait.h>
-#include <sofia-sip/su_tag.h>
+#include "sofia-sip/su.h"
+#include "sofia-sip/su_wait.h"
+#include "sofia-sip/su_tag.h"
 
-#include <sofia-resolv/sres.h>
-#include <sofia-resolv/sres_record.h>
-#include <sofia-resolv/sres_async.h>
+#include "sofia-resolv/sres.h"
+#include "sofia-resolv/sres_record.h"
+#include "sofia-resolv/sres_async.h"
 
 SOFIA_BEGIN_DECLS
 

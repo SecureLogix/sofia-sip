@@ -38,12 +38,12 @@
 
 #include "config.h"
 
-#include <sofia-sip/su_alloc.h>
+#include "sofia-sip/su_alloc.h"
 
-#include <sofia-sip/msg.h>
-#include <sofia-sip/bnf.h>
-#include <sofia-sip/msg_parser.h>
-#include <sofia-sip/msg_header.h>
+#include "sofia-sip/msg.h"
+#include "sofia-sip/bnf.h"
+#include "sofia-sip/msg_parser.h"
+#include "sofia-sip/msg_header.h"
 
 #include <stddef.h>
 #include <stdlib.h>

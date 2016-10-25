@@ -36,10 +36,10 @@
  */
 
 #ifndef MSG_TYPES_H
-#include <sofia-sip/msg_types.h>
+#include "sofia-sip/msg_types.h"
 #endif
 #ifndef MSG_MIME_H
-#include <sofia-sip/msg_mime.h>
+#include "sofia-sip/msg_mime.h"
 #endif
 
 SOFIA_BEGIN_DECLS

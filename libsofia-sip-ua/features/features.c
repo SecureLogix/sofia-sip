@@ -34,7 +34,7 @@
 
 #include <stddef.h>
 
-#include <sofia-sip/su_configure.h>
+#include "sofia-sip/su_configure.h"
 #include "tport_tls.h"
 #include "sofia-sip/sofia_features.h"
 

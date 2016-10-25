@@ -38,16 +38,16 @@
  */
 
 #ifndef SU_ALLOC_H
-#include <sofia-sip/su_alloc.h>
+#include "sofia-sip/su_alloc.h"
 #endif
 #ifndef MSG_HEADER_H
-#include <sofia-sip/msg_header.h>
+#include "sofia-sip/msg_header.h"
 #endif
 #ifndef BNF_H
-#include <sofia-sip/bnf.h>
+#include "sofia-sip/bnf.h"
 #endif
 #ifndef URL_H
-#include <sofia-sip/url.h>
+#include "sofia-sip/url.h"
 #endif
 
 SOFIA_BEGIN_DECLS

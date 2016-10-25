@@ -35,19 +35,19 @@
  */
 
 #ifndef SU_TAG_H
-#include <sofia-sip/su_tag.h>
+#include "sofia-sip/su_tag.h"
 #endif
 #ifndef SU_WAIT_H
-#include <sofia-sip/su_wait.h>
+#include "sofia-sip/su_wait.h"
 #endif
 #ifndef MSG_TYPES_H
-#include <sofia-sip/msg_types.h>
+#include "sofia-sip/msg_types.h"
 #endif
 #ifndef URL_H
-#include <sofia-sip/url.h>
+#include "sofia-sip/url.h"
 #endif
 #ifndef URL_TAG_H
-#include <sofia-sip/url_tag.h>
+#include "sofia-sip/url_tag.h"
 #endif
 
 SOFIA_BEGIN_DECLS

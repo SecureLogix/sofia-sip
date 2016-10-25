@@ -34,7 +34,7 @@
 
 #include "config.h"
 
-#include "tport_internal.h"
+#include "sofia-sip/tport_internal.h"
 #include "sofia-sip/hostdomain.h"
 
 #if HAVE_IP_RECVERR || HAVE_IPV6_RECVERR

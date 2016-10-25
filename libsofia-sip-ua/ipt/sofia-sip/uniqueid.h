@@ -45,7 +45,7 @@
 #define randint su_randint
 #define randmem su_randmem
 
-#include <sofia-sip/su_uniqueid.h>
+#include "sofia-sip/su_uniqueid.h"
 
 
 #endif

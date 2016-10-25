@@ -44,7 +44,7 @@ char const *name = "torture_su_root";
 #include <assert.h>
 
 #define TSTFLAGS rt->rt_flags
-#include <sofia-sip/tstdef.h>
+#include "sofia-sip/tstdef.h"
 
 typedef struct root_test_s root_test_t;
 typedef struct test_ep_s   test_ep_t;
@@ -53,9 +53,9 @@ typedef struct test_ep_s   test_ep_t;
 #define SU_WAKEUP_ARG_T  test_ep_t
 #define SU_MSG_ARG_T     root_test_t *
 
-#include <sofia-sip/su_wait.h>
-#include <sofia-sip/su_alloc.h>
-#include <sofia-sip/su_log.h>
+#include "sofia-sip/su_wait.h"
+#include "sofia-sip/su_alloc.h"
+#include "sofia-sip/su_log.h"
 
 #if SU_HAVE_PTHREADS
 #include <pthread.h>

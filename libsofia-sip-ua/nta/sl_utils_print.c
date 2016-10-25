@@ -39,7 +39,7 @@
 #include <assert.h>
 #include <string.h>
 
-#include <sofia-sip/sip_header.h>
+#include "sofia-sip/sip_header.h"
 #include "sofia-sip/sl_utils.h"
 
 /**Print a SIP message. 
@@ -51,7 +51,7 @@
  *
  * @param stream   output stream (if @c NULL, @c stdout is used).
  * @param prefix   string printed before the first line.
- * @param sip      message to be logged.
+ *ï¿½@param sip      message to be logged.
  * @param details  flag specifying if detailed output is desired.
  */
 void sl_message_log(FILE *stream, 

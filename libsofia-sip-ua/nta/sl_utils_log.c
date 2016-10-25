@@ -40,9 +40,9 @@
 #include <stdio.h>
 #include <assert.h>
 
-#include <sofia-sip/su_log.h>
+#include "sofia-sip/su_log.h"
 
-#include <sofia-sip/sip_header.h>
+#include "sofia-sip/sip_header.h"
 #include "sofia-sip/sl_utils.h"
 
 /**Log a SIP message. 
@@ -55,7 +55,7 @@
  * @param log      output log (if @c NULL, su_default_log() is used).
  * @param level    log level
  * @param prefix   string logged before the first line.
- * @param sip      message to be logged.
+ *ï¿½@param sip      message to be logged.
  * @param details  flag specifying if detailed output is desired.
  */
 void sl_sip_log(su_log_t *log,

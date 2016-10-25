@@ -35,8 +35,8 @@
 
 #define TAG_NAMESPACE "stun"
 
-#include <sofia-sip/su_tag_class.h>
-#include <sofia-sip/stun_tag.h>
+#include "sofia-sip/su_tag_class.h"
+#include "sofia-sip/stun_tag.h"
 
 /**@def STUNTAG_ANY()
  * 

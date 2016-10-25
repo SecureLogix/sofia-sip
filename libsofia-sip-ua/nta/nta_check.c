@@ -32,11 +32,11 @@
 
 #include "config.h"
 
-#include <sofia-sip/su_tagarg.h>
-#include <sofia-sip/sip_header.h>
-#include <sofia-sip/sip_status.h>
-#include <sofia-sip/sip_util.h>
-#include <sofia-sip/nta.h>
+#include "sofia-sip/su_tagarg.h"
+#include "sofia-sip/sip_header.h"
+#include "sofia-sip/sip_status.h"
+#include "sofia-sip/sip_util.h"
+#include "sofia-sip/nta.h"
 
 /* ======================================================================== */
 /* Request validation */

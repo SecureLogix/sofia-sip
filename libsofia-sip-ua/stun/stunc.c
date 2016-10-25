@@ -131,7 +131,7 @@ typedef struct stunc_s stunc_t;
 #include "sofia-sip/stun.h"
 #include "sofia-sip/stun_tag.h"
 #include "sofia-sip/sofia_features.h"
-#include <sofia-sip/su.h>
+#include "sofia-sip/su.h"
 
 enum {
   do_secret = 1,
@@ -152,7 +152,7 @@ static char const __func__[] = "stunc";
 #define SU_DEBUG 0
 #endif
 #define SU_LOG (stun_log)
-#include <sofia-sip/su_debug.h>
+#include "sofia-sip/su_debug.h"
 
 void usage(char *name)
 {

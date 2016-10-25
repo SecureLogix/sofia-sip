@@ -41,9 +41,9 @@
 #include <assert.h>
 
 #include "sofia-sip/sip_parser.h"
-#include <sofia-sip/sip_util.h>
-#include <sofia-sip/msg_date.h>
-#include <sofia-sip/su_time.h>
+#include "sofia-sip/sip_util.h"
+#include "sofia-sip/msg_date.h"
+#include "sofia-sip/su_time.h"
 
 /** Return current time as seconds since Epoch. */
 sip_time_t sip_now(void)

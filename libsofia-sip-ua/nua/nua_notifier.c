@@ -42,14 +42,14 @@
 
 #include <assert.h>
 
-#include <sofia-sip/string0.h>
-#include <sofia-sip/sip_protos.h>
-#include <sofia-sip/sip_extra.h>
-#include <sofia-sip/sip_status.h>
-#include <sofia-sip/sip_util.h>
-#include <sofia-sip/su_uniqueid.h>
-#include <sofia-sip/su_md5.h>
-#include <sofia-sip/token64.h>
+#include "sofia-sip/string0.h"
+#include "sofia-sip/sip_protos.h"
+#include "sofia-sip/sip_extra.h"
+#include "sofia-sip/sip_status.h"
+#include "sofia-sip/sip_util.h"
+#include "sofia-sip/su_uniqueid.h"
+#include "sofia-sip/su_md5.h"
+#include "sofia-sip/token64.h"
 
 #include "nua_stack.h"
 

@@ -40,9 +40,9 @@
 /* Get bodies of inlined functions included in library */
 #define SIP_STATIC_INLINE
 
-#include <sofia-sip/su_alloc.h>
+#include "sofia-sip/su_alloc.h"
 #include "sofia-sip/sip_parser.h"
-#include <sofia-sip/sip_status.h>
+#include "sofia-sip/sip_status.h"
 
 #include <stddef.h>
 #include <stdlib.h>

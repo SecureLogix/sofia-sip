@@ -340,7 +340,7 @@ void http_set_cookie_update(http_set_cookie_t *sc)
 
 }
 
-#include <sofia-sip/msg_date.h>
+#include "sofia-sip/msg_date.h"
 
 /* Scan a cookie parameter */
 static issize_t set_cookie_scanner(char *s)

@@ -33,13 +33,13 @@
 
 #define TAG_NAMESPACE "url"
 
-#include <sofia-sip/su.h>
+#include "sofia-sip/su.h"
 
-#include <sofia-sip/url_tag.h>
-#include <sofia-sip/url_tag_class.h>
-#include <sofia-sip/su_tag_class.h>
+#include "sofia-sip/url_tag.h"
+#include "sofia-sip/url_tag_class.h"
+#include "sofia-sip/su_tag_class.h"
 
-#include <sofia-sip/url.h>
+#include "sofia-sip/url.h"
 
 #include <string.h>
 

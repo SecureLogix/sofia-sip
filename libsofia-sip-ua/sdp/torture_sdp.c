@@ -41,17 +41,17 @@
 #include <stddef.h>
 #include <stdlib.h>
 
-#include <sofia-sip/su_types.h>
+#include "sofia-sip/su_types.h"
 
-#include <sofia-sip/sdp.h>
+#include "sofia-sip/sdp.h"
 
-#include <sofia-sip/su_tag.h>
-#include <sofia-sip/su_tag_io.h>
-#include <sofia-sip/sdp_tag.h>
+#include "sofia-sip/su_tag.h"
+#include "sofia-sip/su_tag_io.h"
+#include "sofia-sip/sdp_tag.h"
 
 #define TSTFLAGS tstflags
 
-#include <sofia-sip/tstdef.h>
+#include "sofia-sip/tstdef.h"
 
 int tstflags;
 

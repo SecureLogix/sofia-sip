@@ -27,10 +27,10 @@
 #define TP_STACK_T struct tester
 #define SU_ROOT_MAGIC_T struct tester
 
-#include <sofia-sip/su_wait.h>
-#include <sofia-sip/sip.h>
-#include <sofia-sip/tport.h>
-#include <sofia-sip/nua.h>
+#include "sofia-sip/su_wait.h"
+#include "sofia-sip/sip.h"
+#include "sofia-sip/tport.h"
+#include "sofia-sip/nua.h"
 
 struct tester
 {

@@ -60,11 +60,11 @@ typedef unsigned _int32 uint32_t;
 #include <ws2tcpip.h>
 #endif
 
-#include <sofia-resolv/sres.h>
-#include <sofia-resolv/sres_async.h>
-#include <sofia-resolv/sres_record.h>
+#include "sofia-resolv/sres.h"
+#include "sofia-resolv/sres_async.h"
+#include "sofia-resolv/sres_record.h"
 
-#include <sofia-sip/su_alloc.h>
+#include "sofia-sip/su_alloc.h"
 
 #include <assert.h>
 #include <stdlib.h>
@@ -73,7 +73,7 @@ typedef unsigned _int32 uint32_t;
 #include <errno.h>
 
 #define TSTFLAGS tstflags
-#include <sofia-sip/tstdef.h>
+#include "sofia-sip/tstdef.h"
 
 #if HAVE_POLL
 #include <poll.h>
@@ -1892,7 +1892,7 @@ void usage(int exitcode)
   exit(exitcode);
 }
 
-#include <sofia-sip/su_log.h>
+#include "sofia-sip/su_log.h"
 
 extern su_log_t sresolv_log[];
 

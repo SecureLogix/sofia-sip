@@ -43,10 +43,10 @@
 #include <limits.h>
 
 #include <stdarg.h>
-#include <sofia-sip/su_tagarg.h>
+#include "sofia-sip/su_tagarg.h"
 
-#include <sofia-sip/su.h>
-#include <sofia-sip/su_alloc.h>
+#include "sofia-sip/su.h"
+#include "sofia-sip/su_alloc.h"
 
 #include "msg_internal.h"
 #include "sofia-sip/msg_parser.h"
@@ -1875,7 +1875,7 @@ msg_header_access(msg_pub_t const *pub, msg_hclass_t *hc)
     return NULL;
 }
 
-#include <sofia-sip/su_uniqueid.h>
+#include "sofia-sip/su_uniqueid.h"
 
 /** Generates a random token.
  *

@@ -42,14 +42,14 @@
  *
  */
 
-#include <sofia-sip/su_config.h>
+#include "sofia-sip/su_config.h"
 
 #ifndef SIP_HEADER_H
-#include <sofia-sip/sip_header.h>
+#include "sofia-sip/sip_header.h"
 #endif
 
 #ifndef SIP_HCLASSES_H
-#include <sofia-sip/sip_hclasses.h>
+#include "sofia-sip/sip_hclasses.h"
 #endif
 
 SOFIA_BEGIN_DECLS

@@ -47,9 +47,9 @@
 #include <openssl/bio.h>
 #include <openssl/opensslv.h>
 
-#include <sofia-sip/su_types.h>
-#include <sofia-sip/su.h>
-#include <sofia-sip/su_wait.h>
+#include "sofia-sip/su_types.h"
+#include "sofia-sip/su.h"
+#include "sofia-sip/su_wait.h"
 
 #include <assert.h>
 #include <stdio.h>
@@ -61,7 +61,7 @@
 #endif
 
 #include "tport_tls.h"
-#include "tport_internal.h"
+#include "sofia-sip/tport_internal.h"
 
 char const tls_version[] = OPENSSL_VERSION_TEXT;
 

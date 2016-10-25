@@ -46,11 +46,11 @@
  */
 
 #ifndef SU_ALLOC_H
-#include <sofia-sip/su_alloc.h>
+#include "sofia-sip/su_alloc.h"
 #endif
 
 #ifndef AUTH_PLUGIN_H
-#include <sofia-sip/auth_plugin.h>
+#include "sofia-sip/auth_plugin.h"
 #endif
 
 SOFIA_BEGIN_DECLS

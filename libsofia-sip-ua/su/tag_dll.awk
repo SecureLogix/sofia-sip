@@ -77,7 +77,7 @@ HEADER {
   if (DLLREF) {
     print \
       "#include \"config.h\"\n\n" \
-      "#include <sofia-sip/su_tag_class.h>\n\n" > DLL;
+      "#include \"sofia-sip/su_tag_class.h\"\n\n" > DLL;
   }
 
   printf("/*\n" \
@@ -90,7 +90,7 @@ HEADER {
 	 " * \n"\
 	 " */\n\n"\
 	 "#include \"config.h\"\n\n"\
-	 "#include <sofia-sip/su_tag_class.h>\n"\
+	 "#include \"sofia-sip/su_tag_class.h\"\n"\
 	 "\n"\
 	 "#if defined _WIN32 || defined HAVE_OPEN_C\n"\
 	 "#define EXPORT __declspec(dllexport)\n"\

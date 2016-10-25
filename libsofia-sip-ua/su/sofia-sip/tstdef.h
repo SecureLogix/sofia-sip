@@ -56,12 +56,12 @@
  * #include <stdio.h>
  * #include <limits.h>
  * 
- * #include <sofia-sip/su.h>
+ * #include "sofia-sip/su.h"
  * 
  * #define TSTFLAGS tstflags
  *
  * #include <stdlib.h>
- * #include <sofia-sip/tstdef.h>
+ * #include "sofia-sip/tstdef.h"
  *
  * static int tstflags = 0;
  * 
@@ -127,7 +127,7 @@
  */
 
 #ifndef SU_TYPES_H
-#include <sofia-sip/su_types.h>
+#include "sofia-sip/su_types.h"
 #endif
 
 SOFIA_BEGIN_DECLS

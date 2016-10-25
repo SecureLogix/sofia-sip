@@ -87,13 +87,13 @@ typedef NTH_SITE_MAGIC_T   nth_site_magic_t;
  * 3) Other include files
  */
 
-#include <sofia-sip/su_wait.h>
-#include <sofia-sip/su_tag.h>
-#include <sofia-sip/http.h>
-#include <sofia-sip/http_status.h>
+#include "sofia-sip/su_wait.h"
+#include "sofia-sip/su_tag.h"
+#include "sofia-sip/http.h"
+#include "sofia-sip/http_status.h"
 
 #ifndef NTH_TAG_H
-#include <sofia-sip/nth_tag.h>
+#include "sofia-sip/nth_tag.h"
 #endif
 
 /* ----------------------------------------------------------------------

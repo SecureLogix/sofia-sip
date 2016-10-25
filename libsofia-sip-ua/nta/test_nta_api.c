@@ -761,14 +761,14 @@ int api_test_tport(agent_t *ag)
   TEST_1(!nta_agent_public_via(agent));
   TEST_1(!nta_agent_contact(agent));
 
-  TEST_1(nta_agent_add_tport(agent, (url_string_t *)url, TAG_END()) == 0);
+  TEST_1(nta_agent_add_tport(agent, (url_string_t *)url, TAG_END()));
   TEST_1(v = nta_agent_via(agent)); TEST_1(!v->v_next);
   TEST(strcasecmp(v->v_protocol, sip_transport_tcp), 0);
   TEST_1(m = nta_agent_contact(agent));
   TEST_S(m->m_url->url_params, "transport=tcp");
 
   TEST_1(nta_agent_add_tport(agent, (url_string_t *)url, 
-			     TPTAG_SERVER(0), TAG_END()) == 0);
+			     TPTAG_SERVER(0), TAG_END()));
   TEST_1(v = nta_agent_public_via(agent)); TEST_1(!v->v_next);
   TEST(strcasecmp(v->v_protocol, sip_transport_tcp), 0);
   TEST_1(host_has_domain_invalid(v->v_host));
@@ -776,14 +776,14 @@ int api_test_tport(agent_t *ag)
   TEST_S(m->m_url->url_params, "transport=tcp");
 
   url->url_params = "transport=udp";
-  TEST_1(nta_agent_add_tport(agent, (url_string_t *)url, TAG_END()) == 0);
+  TEST_1(nta_agent_add_tport(agent, (url_string_t *)url, TAG_END()));
   TEST_1(v = nta_agent_via(agent)); TEST_1(v = v->v_next);
   TEST(strcasecmp(v->v_protocol, sip_transport_udp), 0);
 
   TEST_VOID(nta_agent_destroy(agent));
 
   TEST_1(agent = nta_agent_create(ag->ag_root, NONE, NULL, NULL, TAG_END()));
-  TEST_1(nta_agent_add_tport(agent, (url_string_t *)url, TAG_END()) == 0);
+  TEST_1(nta_agent_add_tport(agent, (url_string_t *)url, TAG_END()));
   TEST_1(v = nta_agent_via(agent)); TEST_1(!v->v_next);
   TEST(strcasecmp(v->v_protocol, sip_transport_udp), 0);
   TEST_1(m = nta_agent_contact(agent));
@@ -793,7 +793,7 @@ int api_test_tport(agent_t *ag)
   url->url_params = "transport=tcp,udp";
 
   TEST_1(agent = nta_agent_create(ag->ag_root, NONE, NULL, NULL, TAG_END()));
-  TEST_1(nta_agent_add_tport(agent, (url_string_t *)url, TAG_END()) == 0);
+  TEST_1(nta_agent_add_tport(agent, (url_string_t *)url, TAG_END()));
   TEST_1(v = nta_agent_via(agent)); 
   TEST(strcasecmp(v->v_protocol, sip_transport_tcp), 0);
   TEST_1(v = v->v_next);  
@@ -805,7 +805,7 @@ int api_test_tport(agent_t *ag)
   url->url_params = NULL;
 
   TEST_1(agent = nta_agent_create(ag->ag_root, NONE, NULL, NULL, TAG_END()));
-  TEST_1(nta_agent_add_tport(agent, (url_string_t *)url, TAG_END()) == 0);
+  TEST_1(nta_agent_add_tport(agent, (url_string_t *)url, TAG_END()));
   TEST_1(v = nta_agent_via(agent)); 
   TEST(strcasecmp(v->v_protocol, sip_transport_udp), 0);
   TEST_1(v = v->v_next);

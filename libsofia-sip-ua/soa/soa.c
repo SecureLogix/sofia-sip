@@ -39,21 +39,21 @@
 
 #include <assert.h>
 
-#include <sofia-sip/su_tag_class.h>
-#include <sofia-sip/su_wait.h>
+#include "sofia-sip/su_tag_class.h"
+#include "sofia-sip/su_wait.h"
 
 #include "sofia-sip/soa.h"
 #include "sofia-sip/sdp.h"
 #include "sofia-sip/soa_session.h"
 #include "sofia-sip/soa_add.h"
 
-#include <sofia-sip/hostdomain.h>
-#include <sofia-sip/su_tagarg.h>
-#include <sofia-sip/su_localinfo.h>
-#include <sofia-sip/su_uniqueid.h>
+#include "sofia-sip/hostdomain.h"
+#include "sofia-sip/su_tagarg.h"
+#include "sofia-sip/su_localinfo.h"
+#include "sofia-sip/su_uniqueid.h"
 
-#include <sofia-sip/string0.h>
-#include <sofia-sip/su_errno.h>
+#include "sofia-sip/string0.h"
+#include "sofia-sip/su_errno.h"
 
 #define NONE ((void *)-1)
 #define XXX assert(!"implemented")
@@ -745,7 +745,7 @@ tagi_t *soa_base_get_paramlist(soa_session_t const *ss,
   return params;
 }
 
-#include <sofia-sip/sip_status.h>
+#include "sofia-sip/sip_status.h"
 
 /** Convert @soa error to a SIP response code and phrase. */ 
 int soa_error_as_sip_response(soa_session_t *ss,

@@ -1472,7 +1472,7 @@ char const *stateless_branch(nta_agent_t *sa,
   su_md5_t md5[1];
   uint8_t digest[SU_MD5_DIGEST_SIZE];
   char branch[(SU_MD5_DIGEST_SIZE * 8 + 4)/ 5 + 1];
-  sip_route_t const *r;
+  //sip_route_t const *r;
 
   assert(sip->sip_request);
 
@@ -1755,7 +1755,10 @@ int nta_agent_add_tport(nta_agent_t *self,
     }
   }
 
-  if (tport_tbind(self->sa_tports, tpn, tports, ta_tags(ta)) < 0) {
+  // CHANGE 9 - DAV 20090717
+    // CHANGE 1 - EAB 20090324
+    //if ((retval = tport_tbind(self->sa_tports, tpn, tports, ta_tags(ta))) < 0) {
+  if ((retval = tport_tbind(self->sa_tports, tpn, tports, ta_tags(ta))) == 0) {
     error = su_errno();
     SU_DEBUG_1(("nta: bind(%s:%s;transport=%s%s%s%s%s): %s\n",
 		tpn->tpn_canon, tpn->tpn_port, tpn->tpn_proto,
@@ -1794,7 +1797,8 @@ int nta_agent_add_tport(nta_agent_t *self,
   su_free(self->sa_home, url);
   ta_end(ta);
 
-  return 0;
+// CHANGE 1 - EAB 20090324
+  return retval;
 
  error:
   ta_end(ta);
@@ -2525,7 +2529,9 @@ void agent_recv_request(nta_agent_t *agent,
     agent->sa_stats->as_trless_request++;
     SU_DEBUG_5(("nta: %s (%u) %s\n",
 		method_name, cseq, "to message callback"));
-    (void)agent->sa_callback(agent->sa_magic, agent, msg, sip);
+
+    // CHANGE 4 - EAB 20090324
+    (void)agent->sa_callback(agent->sa_magic, agent, msg, sip, tport);
   }
   else {
     agent->sa_stats->as_trless_request++;
@@ -2803,7 +2809,9 @@ void agent_recv_response(nta_agent_t *agent,
      * Store message and transport to hook for the duration of the callback
      * so that the transport can be obtained by nta_transport().
      */
-    (void)agent->sa_callback(agent->sa_magic, agent, msg, sip);
+
+    // CHANGE 4 - EAB 20090324
+    (void)agent->sa_callback(agent->sa_magic, agent, msg, sip, tport);
     return;
   }
 
@@ -3015,6 +3023,101 @@ int nta_msg_tsend(nta_agent_t *agent, msg_t *msg, url_string_t const *u,
 
   return retval;
 }
+
+
+// CHANGE 5 - EAB 20090324
+// The following is used for debugging purposes only
+int nta_msg_tsend_no_destroy(nta_agent_t *agent, msg_t *msg, url_string_t const *u,
+		  tag_type_t tag, tag_value_t value, ...)
+{
+  int retval = -1;
+  ta_list ta;
+  sip_t *sip = sip_object(msg);
+  tp_name_t tpn[1] = {{ NULL }};
+  char const *what;
+
+  if (!sip) {
+    msg_destroy(msg);
+    return -1;
+  }
+
+  what =
+    sip->sip_status ? "nta_msg_tsend(response)" :
+    sip->sip_request ? "nta_msg_tsend(request)" :
+    "nta_msg_tsend()";
+
+  ta_start(ta, tag, value);
+
+  if (sip_add_tl(msg, sip, ta_tags(ta)) < 0)
+    SU_DEBUG_3(("%s: cannot add headers\n", what));
+  else if (sip->sip_status) {
+    tport_t *tport = NULL;
+    int *use_rport = NULL;
+    int retry_without_rport = 0;
+
+    struct sigcomp_compartment *cc; cc = NONE;
+
+    if (agent->sa_server_rport)
+      use_rport = &retry_without_rport, retry_without_rport = 1;
+
+    tl_gets(ta_args(ta),
+	    NTATAG_TPORT_REF(tport),
+	    IF_SIGCOMP_TPTAG_COMPARTMENT_REF(cc)
+	    /* NTATAG_INCOMPLETE_REF(incomplete), */
+	    TAG_END());
+
+    if (!sip->sip_separator &&
+	!(sip->sip_separator = sip_separator_create(msg_home(msg))))
+      SU_DEBUG_3(("%s: cannot create sip_separator\n", what));
+    else if (msg_serialize(msg, (msg_pub_t *)sip) != 0)
+      SU_DEBUG_3(("%s: sip_serialize() failed\n", what));
+    else if (!sip_via_remove(msg, sip))
+      SU_DEBUG_3(("%s: cannot remove Via\n", what));
+    else if (nta_tpn_by_via(tpn, sip->sip_via, use_rport) < 0)
+      SU_DEBUG_3(("%s: bad via\n", what));
+    else {
+      if (!tport)
+	tport = tport_by_name(agent->sa_tports, tpn);
+      if (!tport)
+	tport = tport_by_protocol(agent->sa_tports, tpn->tpn_proto);
+
+      if (retry_without_rport)
+	tpn->tpn_port = sip_via_port(sip->sip_via, NULL);
+
+      if (tport && tpn->tpn_comp && cc == NONE)
+	cc = agent_compression_compartment(agent, tport, tpn, -1);
+
+      if (tport_tsend(tport, msg, tpn,
+		      IF_SIGCOMP_TPTAG_COMPARTMENT(cc)
+		      TPTAG_MTU(INT_MAX), ta_tags(ta), TAG_END())) {
+	agent->sa_stats->as_sent_msg++;
+	agent->sa_stats->as_sent_response++;
+	retval = 0;
+      }
+      else {
+	SU_DEBUG_3(("%s: send fails\n", what));
+      }
+    }
+  }
+
+  //everything prior to this is for status messages
+
+  else {
+    /* Send request */
+    if (outgoing_create(agent, NULL, NULL, u, NULL, msg_ref_create(msg),
+			NTATAG_STATELESS(1),
+			ta_tags(ta)))
+      retval = 0;
+  }
+
+  if (retval == 0)
+    SU_DEBUG_5(("%s\n", what));
+
+  ta_end(ta);
+
+  return retval;
+}
+
 
 /** Reply to a request message.
  *
@@ -7179,6 +7282,10 @@ nta_outgoing_t *outgoing_create(nta_agent_t *agent,
       tpn = tport_name(override_tport);
       orq->orq_user_tport = 1;
     }
+
+    // CHANGE 2 - EAB 20090324
+    else
+      orq->orq_tport = override_tport;
   }
 
   if (route_url && !orq->orq_user_tport) {
@@ -7346,6 +7453,10 @@ outgoing_prepare_send(nta_outgoing_t *orq)
   if (!tpn->tpn_port)
     tpn->tpn_port = "";
 
+  // CHANGE 2 - EAB 20090324
+  if ( orq->orq_tport )
+    tp = orq->orq_tport;
+  else
     tp = tport_by_name(sa->sa_tports, tpn);
 
   if (tpn->tpn_port[0] == '\0') {
@@ -7583,6 +7694,12 @@ outgoing_try_tcp_instead(nta_outgoing_t *orq)
   tpn->tpn_proto = "tcp";
   orq->orq_try_tcp_instead = 1;
 
+  // CHANGE 3 - EAB 20090324
+  if ( orq->orq_tport )
+  {
+    tp = tport_next(orq->orq_tport);
+  }
+  else
     tp = tport_by_name(orq->orq_agent->sa_tports, tpn);
 
   if (tp && tp != orq->orq_tport) {

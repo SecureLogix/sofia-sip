@@ -117,10 +117,12 @@ enum {
  * 3) Agent-level prototypes
  */
 
+// CHANGE 1 - EAB 20090324
 typedef int nta_message_f(nta_agent_magic_t *context,
 			  nta_agent_t *agent,
 			  msg_t *msg,
-			  sip_t *sip);
+			  sip_t *sip,
+			  void *tport);
 
 SOFIAPUBFUN
 nta_agent_t *nta_agent_create(su_root_t *root,

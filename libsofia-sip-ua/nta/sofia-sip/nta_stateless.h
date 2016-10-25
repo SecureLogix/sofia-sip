@@ -40,10 +40,12 @@
 
 SOFIA_BEGIN_DECLS
 
+// CHANGE 1 - EAB 20090324
 /**@typedef int nta_message_f(nta_agent_magic_t *context,
  *                            nta_agent_t *agent,
  *			      msg_t *msg,
- *			      sip_t *sip);
+ *			      sip_t *sip
+ *                tport_t *tport);
  *
  * Callback for incoming messages.
  *
@@ -79,6 +81,12 @@ SOFIA_BEGIN_DECLS
 SOFIAPUBFUN
 int nta_msg_tsend(nta_agent_t *agent, msg_t *msg, url_string_t const *u,
 		  tag_type_t tag, tag_value_t value, ...);
+
+// CHANGE 5 - EAB 20090324
+SOFIAPUBFUN
+int nta_msg_tsend_no_destroy(nta_agent_t *agent, msg_t *msg, url_string_t const *u,
+		  tag_type_t tag, tag_value_t value, ...);
+
 
 /** Reply to a request message. */
 SOFIAPUBFUN

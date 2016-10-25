@@ -50,9 +50,9 @@ RFC822-like message, the header and message objects. Currently, there
 are three parsers defined: SIP, HTTP, and MIME.
 
 The C structure corresponding to each header is defined either in a
-<sofia-sip/msg_types.h> or in a protocol-specific header file. These
-protocol-specific header files include <sofia-sip/sip.h>, <sofia-sip/http.h>, and
-<sofia-sip/msg_mime.h>. For each header, there is defined a @em header @em class
+"sofia-sip/msg_types.h" or in a protocol-specific header file. These
+protocol-specific header files include "sofia-sip/sip.h", "sofia-sip/http.h", and
+"sofia-sip/msg_mime.h". For each header, there is defined a @em header @em class
 structure, some standard functions, and tags for including them in tag
 lists. 
 

@@ -66,7 +66,7 @@ sres_resolver_create(). The provided @ref su_root_t "root object" takes care
 of calling the sres_query() and sres_query_sockaddr() callback functions.
 
 @code
-#include <sofia-sip/sresolv.h>
+#include "sofia-sip/sresolv.h"
 
 sres_resolver_t *sres_resolver_create(su_root_t *root, 
 				      char const *resolv_conf,
@@ -137,7 +137,7 @@ objects:
 #include <sys/socket.h>
 #include <netinet/in.h>
 
-#include <sofia-resolv/sres.h>
+#include "sofia-resolv/sres.h"
 
 sres_resolver_t *sres_resolver_new(char const *resolv_conf_path);
 
@@ -166,7 +166,7 @@ query does not return until the query is responded or it times out.
 #include <sys/socket.h>
 #include <netinet/in.h>
 
-#include <sofia-resolv/sres.h>
+#include "sofia-resolv/sres.h"
 
 int sres_blocking_query(sres_resolver_t *res,
 			uint16_t type,
@@ -189,7 +189,7 @@ It is also possible to use resolver asynchronously without #su_root_t object.
 #include <sys/socket.h>
 #include <netinet/in.h>
 
-#include <sofia-resolv/sres_async.h>
+#include "sofia-resolv/sres_async.h"
 
 sres_async_t *sres_resolver_set_async(sres_resolver_t *res, 
 				      sres_update_f *update,
@@ -213,7 +213,7 @@ Here is a short code fragment showing how to use resolver driven from
 
 #define SRES_CONTEXT_T struct context
 
-#include <sofia-sip/sresolv.h>
+#include "sofia-sip/sresolv.h"
 
 ...
 

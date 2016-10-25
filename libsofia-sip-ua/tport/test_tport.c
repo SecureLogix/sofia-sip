@@ -521,9 +521,8 @@ static int init_test(tp_test_t *tt)
 		       TAG_END()));
 
   /* Bind client transports */
-  TEST(tport_tbind(tt->tt_tports, myname, transports,
-		   TPTAG_SERVER(0), TAG_END()), 
-       0);
+  TEST_1(tport_tbind(tt->tt_tports, myname, transports,
+		   TPTAG_SERVER(0), TAG_END()));
 
   if (getenv("TPORT_TEST_HOST"))
     myname->tpn_host = getenv("TPORT_TEST_HOST");
@@ -542,10 +541,9 @@ static int init_test(tp_test_t *tt)
 		       TAG_END()));
 
   /* Bind server transports */
-  TEST(tport_tbind(tt->tt_srv_tports, myname, transports, 
+  TEST_1(tport_tbind(tt->tt_srv_tports, myname, transports,
 		   TPTAG_SERVER(1),
-		   TAG_END()), 
-       0);
+		   TAG_END()));
 
   /* Check that the master transport has idle parameter */
   TEST(tport_get_params(tt->tt_srv_tports,
@@ -585,7 +583,7 @@ static int init_test(tp_test_t *tt)
     TEST(tport_tbind(tt->tt_srv_tports, rname, transports, 
 		     TPTAG_SERVER(1),
 		     TAG_END()), 
-	 -1);
+	 0);
 
     after = count_tports(tt->tt_srv_tports);
 
@@ -601,10 +599,9 @@ static int init_test(tp_test_t *tt)
     rname->tpn_ident = "server2";
 
     /* Bind server transports to another port */
-    TEST(tport_tbind(tt->tt_srv_tports, rname, transports, 
+    TEST_1(tport_tbind(tt->tt_srv_tports, rname, transports,
 		     TPTAG_SERVER(1),
-		     TAG_END()), 
-	 0);
+		     TAG_END()));
 
     /* Check that new transports are after old ones. */
     for (i = 0, tp = tport_primaries(tt->tt_srv_tports);
@@ -630,18 +627,16 @@ static int init_test(tp_test_t *tt)
     tlsname->tpn_ident = "server";
 
     /* Bind client transports */
-    TEST(tport_tbind(tt->tt_tports, tlsname, transports,
+    TEST_1(tport_tbind(tt->tt_tports, tlsname, transports,
 		     TPTAG_SERVER(0), 
 		     TPTAG_CERTIFICATE(srcdir),
-		     TAG_END()), 
-	 0);
+		     TAG_END()));
 
     /* Bind tls server transport */
-    TEST(tport_tbind(tt->tt_srv_tports, tlsname, transports, 
+    TEST_1(tport_tbind(tt->tt_srv_tports, tlsname, transports,
 		     TPTAG_SERVER(1),
 		     TPTAG_CERTIFICATE(srcdir),
-		     TAG_END()), 
-	 0);
+		     TAG_END()));
   }
 #endif
 
@@ -1547,7 +1542,7 @@ static int stun_test(tp_test_t *tt)
   
   TEST(tport_tbind(tt->tt_tports, tpn, transports, TPTAG_SERVER(1), 
 		   STUNTAG_SERVER("999.999.999.999"),
-		   TAG_END()), -1);
+		   TAG_END()), 0);
 
   tport_destroy(mr);
 

@@ -10,9 +10,6 @@
 Doxyfile
 
 # various files created by a make check
-config.h
-config.log
-config.status
 libsofia-sip-ua/bnf/torture_bnf
 libsofia-sip-ua/http/test_http
 libsofia-sip-ua/ipt/torture_base64
@@ -58,7 +55,6 @@ libsofia-sip-ua/su/torture_su_time
 libsofia-sip-ua/su/torture_su_timer
 libsofia-sip-ua/tport/test_tport
 libsofia-sip-ua/url/torture_url
-libtool
 packages/sofia-sip-ua-glib.pc
 packages/sofia-sip-ua.pc
 stamp-h1

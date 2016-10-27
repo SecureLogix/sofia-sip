@@ -161,7 +161,7 @@ AC_HEADER_STDC
 ### ----------------
 
 AC_TYPE_SIGNAL
-AC_TYPE_LONGLONG
+#AC_TYPE_LONGLONG
 
 dnl
 dnl Define HAVE_C99_FORMAT to 1 if the formatted IO functions (printf/scanf
@@ -208,7 +208,7 @@ AC_RUN_IFELSE([AC_LANG_PROGRAM([AC_INCLUDES_DEFAULT],
  else if (strcmp(buf, "1"))
   exit(2);]])],
  [ac_cv_c_ll_format=yes],
- [ac_cv_c_ll_format=no],
+ [ac_cv_c_ll_format=yes],
  [ac_cv_c_ll_format=yes])
 ])
 

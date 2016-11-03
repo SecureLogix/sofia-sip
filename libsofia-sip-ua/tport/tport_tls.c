@@ -203,9 +203,9 @@ int tls_init_context(tls_t *tls, tls_issues_t const *ti)
     /* meth = SSLv23_method(); */
 
     if (ti->version)
-      meth = TLSv1_method();
+      meth = (SSL_METHOD *)TLSv1_method();
     else
-      meth = SSLv23_method();
+      meth = (SSL_METHOD *)SSLv23_method();
 
     tls->ctx = SSL_CTX_new(meth);
   }
@@ -459,7 +459,7 @@ int tls_post_connection_check(tls_t *tls)
     if (strcmp(name, "subjectAltName") != 0)
       continue;
       
-    vp = X509V3_EXT_get(ext); if (!vp) continue;
+    vp = (X509V3_EXT_METHOD *)X509V3_EXT_get(ext); if (!vp) continue;
     d2i = X509V3_EXT_d2i(ext);
     values = vp->i2v(vp, d2i, NULL);
     

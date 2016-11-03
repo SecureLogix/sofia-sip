@@ -1559,7 +1559,7 @@ int tport_bind_client(tport_master_t *mr,
     // CHANGE 1 - EAB 20090324
     if ( !retval )
     {
-        retval = (int)pri;
+        retval = (int)((intptr_t)pri);
     }
     pri->pri_public = tport_type_client; /* XXX */
   }
@@ -1688,7 +1688,7 @@ int tport_bind_server(tport_master_t *mr,
       // CHANGE 1 - EAB 20090324
       if ( !retval )
       {
-          retval = (int)pri;
+          retval = (int)((intptr_t)pri);
       }
 
       not_supported = 0;

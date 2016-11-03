@@ -1,0 +1,22 @@
+Source changed from sofia-sip-1.12.9 in the following ways:
+
+* (slc1) Changes as described in sofiasource (archived in "sofia-sip-1.12.9-modified.tgz")
+
+* (slc2) Removed build artifacts from the archive so that the source would configure and build correctly
+     on a different machine.
+* (slc2) Removed a long long IO support test from configure because of a bug
+     in the test making fail against our toolchain - even though the compiler
+     supports the feature.
+
+* (slc3) Converted references to sofia-sip header files from #include <> to 
+     #include "" so that the -I will allow them to be found in a non-std
+     directory. Fixed some of the unit tests. Note that the nua unit tests
+     are failing, and I believe that the nta changes we made in slc1 caused
+     the nua to be broken. We are not using nua at this time, so this has
+     not been a high priority to fix.
+
+* (slc4) Upgraded Doxygen.conf files to remove obsolete DETAILS_AT_TOP tag.
+     Added @code...@endcode to sip-dig.c, sip-options.c and stunc.c to
+     prevent Doxygen "compile" warnings.
+
+* (slc6) Fix compiler errors and warnings when compiling with gcc 4.7.

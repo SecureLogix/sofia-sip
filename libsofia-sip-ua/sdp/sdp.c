@@ -1444,7 +1444,7 @@ int sdp_media_cmp(sdp_media_t const *a, sdp_media_t const *b)
 
   if (a->m_proto != b->m_proto)
     return a->m_proto < b->m_proto ? -1 : 1;
-  if (a->m_proto == sdp_media_x)
+  if (a->m_proto == sdp_proto_x)
     if ((rv = str0cmp(a->m_proto_name, b->m_proto_name)))
       return rv;
 
